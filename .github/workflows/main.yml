@@ -12,7 +12,8 @@ jobs:
         os: [ubuntu-latest]
         node: [14]
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
         with:
           token: ${{ secrets.PUSH_TOKEN }}
       - name: Setup node env
