@@ -1,0 +1,35 @@
+{
+  "name": "mipdevp-blog",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint:prettier": "prettier --check .",
+    "lint": "npm run lint:prettier",
+    "lintfix": "prettier --write --list-different ."
+  },
+  "dependencies": {
+    "@nuxt/content": "^1.15.1",
+    "@nuxtjs/axios": "^5.13.6",
+    "@nuxtjs/dayjs": "^1.4.1",
+    "@nuxtjs/pwa": "^3.3.5",
+    "@tailwindcss/typography": "^0.5.7",
+    "core-js": "^3.19.3",
+    "nuxt": "^2.15.8",
+    "vue": "^2.6.14",
+    "vue-server-renderer": "^2.6.14",
+    "vue-template-compiler": "^2.6.14",
+    "webpack": "^4.46.0"
+  },
+  "devDependencies": {
+    "@nuxt/postcss8": "^1.1.3",
+    "autoprefixer": "^10.4.11",
+    "eslint-config-prettier": "^8.3.0",
+    "postcss": "^8.4.16",
+    "prettier": "^2.5.1",
+    "tailwindcss": "^3.1.8"
+  }
+}
