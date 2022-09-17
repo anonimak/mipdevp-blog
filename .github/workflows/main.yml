@@ -39,4 +39,4 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
-          script: 'cd ~/mipdevp-blog && sudo ./server_deploy.sh'
+          script: 'cd ~/mipdevp-blog && sudo sh server_deploy.sh'
