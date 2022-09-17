@@ -5,7 +5,7 @@ on:
     branches: [testing]
 
 jobs:
-  deploy:
+  cd:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
