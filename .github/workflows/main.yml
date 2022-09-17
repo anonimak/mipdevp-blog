@@ -21,9 +21,9 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
       - name: Install dependencies
-      - run: npm install
+        run: npm install
       - name: Generate
-      - run: npm run generate
+        run: npm run generate
       - name: Commit built assets
         run: |
           git config --local user.email "action@github.com"
