@@ -1,0 +1,41 @@
+name: CD
+
+on:
+  push:
+    branches: [testing]
+
+jobs:
+  deploy:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node: [14]
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.PUSH_TOKEN }}
+      - name: Setup node env
+        uses: actions/setup-node@v2.1.2
+        with:
+          node-version: ${{ matrix.node }}
+      - name: Install dependencies
+      - run: npm install
+      - name: Generate
+      - run: npm run generate
+      - name: Commit built assets
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git checkout -B deploy
+          git add -f dist/
+          git commit -m "Build front-end assets"
+          git push -f origin deploy
+      - name: Deploy to production
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          script: 'cd ~/mipdevp-blog && ./server_deploy.sh'
