@@ -2,7 +2,8 @@
   "favicon": "/img/favicon.ico",
   "site_title": "MIPDEVP",
   "navbar": {
-    "navbar-logo": "/img/icon.png"
+    "navbar-logo": "/img/icon.png",
+    "logo": "/img/icon.png"
   },
   "landings": {
     "hero": {
@@ -13,7 +14,7 @@
   },
   "blogs": {
     "front_limit": 10,
-    "author": "Anonimak"
+    "author": "Anonimaks"
   },
   "footer": {
     "description": "MIPDEVP"
