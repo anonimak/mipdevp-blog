@@ -16,7 +16,7 @@
           dark:text-white
         "
       >
-        Opini, Tutorial, Panduan. <span class="text-teal-700">MIPDEVP</span>
+        {{ landings.hero.title }}<span class="text-teal-700">{{ title }}</span>
       </h1>
       <p
         class="
@@ -30,8 +30,7 @@
           dark:text-gray-400
         "
       >
-        Helpful guides, tutorials, and opinions based on the situations I bump
-        into while working online.
+        {{ landings.hero.description }}
       </p>
     </div>
     <div class="p-4 mt-6 lg:mt-8 m-auto lg:max-w-4xl">
@@ -98,11 +97,19 @@
 
 <script>
 export default {
-  async asyncData({ $content }) {
+  computed: {
+    landings() {
+      return this.$store.state.settings.landings
+    },
+    title() {
+      return this.$store.state.settings.site_title
+    },
+  },
+  async asyncData({ $content, store }) {
     const articles = await $content('articles')
       .only(['title', 'slug', 'updatedAt', 'description'])
       .sortBy('createdAt', 'desc')
-      .limit(5)
+      .limit(store.state.settings.landings.front_limit)
       .fetch()
 
     return { articles }

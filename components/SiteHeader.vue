@@ -17,12 +17,7 @@
   >
     <div class="m-auto max-w-7xl flex items-center justify-between">
       <nuxt-link to="/">
-        <img
-          src="https://mipdevp.com/web/assets/img/logo-mipdevp-buat-website-terkini-terjangkau.png"
-          alt=""
-          class="mr-3 h-7 sm:h-10"
-          srcset=""
-        />
+        <img :src="navbar.logo" alt="" class="mr-3 h-7 sm:h-10" srcset="" />
       </nuxt-link>
 
       <nav>
@@ -37,5 +32,11 @@
 </template>
 
 <script>
-export default {}
+export default {
+  computed: {
+    navbar() {
+      return this.$store.state.settings.navbar
+    },
+  },
+}
 </script>
