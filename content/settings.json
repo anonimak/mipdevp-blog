@@ -1,0 +1,21 @@
+{
+  "favicon": "/img/favicon.ico",
+  "site_title": "MIPDEVP",
+  "navbar": {
+    "navbar-logo": "/img/icon.png"
+  },
+  "landings": {
+    "hero": {
+      "title": "Opini, Tutorial, Panduan. MIPDEVP",
+      "description": "Helpful guides, tutorials, and opinions based on the situations I bump into while working online. "
+    },
+    "front_limit": 3
+  },
+  "blogs": {
+    "front_limit": 10,
+    "author": "Anonimak"
+  },
+  "footer": {
+    "description": "MIPDEVP"
+  }
+}
