@@ -92,7 +92,7 @@ collections:
                   required: false,
                 }
                 
-        - label: 'Footer Settings'
+          - label: 'Footer Settings'
             name: 'footer'
             widget: 'object'
             fields:
