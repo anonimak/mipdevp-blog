@@ -1,6 +1,8 @@
 ---
-title: blog baru dari netlify
+title: Hello World
 date: 2022-09-18T16:58:18.648Z
-description: testing begadang baru di netlify
+description: Blog pertama MIPDEVP
 ---
-coba ini blognya disini
+Halo teman-teman semua, selamat datang di blog MIPDEVP.
+
+Ini adalah blog pertama dari MIPDEVP
