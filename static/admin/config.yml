@@ -34,7 +34,7 @@ collections:
     editor:
       preview: false
     files:
-      - name: 'settings'
+      - name: 'general-setting'
         label: 'Site Settings'
         file: 'content/settings.json'
         description: 'General Site Settings'
