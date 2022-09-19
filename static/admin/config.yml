@@ -15,12 +15,18 @@ collections:
     editor:
       preview: true
     preview_path: 'blog/{{slug}}'
-    show_preview_links: true
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Active', name: 'is_active', widget: 'boolean' }
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        max: 3
+        min: 1
+        default: ["general"]
 
   - name: 'settings'
     label: 'Settings'
@@ -30,12 +36,44 @@ collections:
     files:
       - name: 'general'
         label: 'Site Settings'
-        file: '_data/settings.json'
+        file: 'content/settings.json'
         description: 'General Site Settings'
         fields:
           - { label: 'Global title', name: 'site_title', widget: 'string' }
+          - { label: 'Favicon', name: 'favicon', widget: 'image' }
+          
+          - label: 'Navbar Settings'
+            name: 'navbar'
+            widget: 'object'
+            fields:
+              - { label: 'Navbar Logo', name: 'navbar-logo', widget: 'image' }
+            
+          - label: 'Landing Page Settings'
+            name: 'landings'
+            widget: 'object'
+            fields:
+              - label: 'Hero Section'
+                name: 'hero'
+                widget: 'object'
+                fields:
+                  - { label: 'Title', name: 'title', widget: 'string' }
+                  - { label: 'Description', name: 'description', widget: 'string' }
+                  - {
+                    label: 'Image Hero',
+                    name: 'image-hero',
+                    widget: 'image',
+                    required: false,
+                  }
+              - {
+                  label: 'Number of blogs on Landing Page',
+                  name: 'front_limit',
+                  widget: 'number',
+                  min: 1,
+                  max: 10,
+                }
+
           - label: 'Blog Settings'
-            name: 'posts'
+            name: 'blogs'
             widget: 'object'
             fields:
               - {
@@ -53,10 +91,16 @@ collections:
                   class: 'thumb',
                   required: false,
                 }
-
+                
+        - label: 'Footer Settings'
+            name: 'footer'
+            widget: 'object'
+            fields:
+              - { label: 'Footer Description', name: 'description', widget: 'string' }
+        
       - name: 'authors'
         label: 'Authors'
-        file: '_data/authors.yml'
+        file: 'content/authors.json'
         description: 'Author descriptions'
         fields:
           - name: 'authors'
