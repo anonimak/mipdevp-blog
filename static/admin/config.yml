@@ -20,7 +20,7 @@ collections:
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
-      - { label: 'Active', name: 'is_active', widget: 'boolean' }
+      - { label: 'Active', name: 'isactive', widget: 'boolean' }
       - label: 'Tags'
         name: 'tags'
         widget: 'list'
