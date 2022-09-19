@@ -21,23 +21,12 @@ collections:
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'Active', name: 'is_active', widget: 'boolean' }
-      - label: 'Tags'
-        name: 'tags'
-        widget: 'relation'
-        collection: 'tags'
-        value_field: '{{slug}}'
-        display_fields: [title]
-        search_fields: [title]
-        multiple: true
-
-  - name: 'tag'
-    label: 'Tag'
-    file: 'content/tags.json'
-    description: 'Tag of blog'
-    create: true
-    fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Description', name: 'description', widget: 'string' }
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        max: 3
+        min: 1
+        default: ["general"]
 
   - name: 'settings'
     label: 'Settings'
