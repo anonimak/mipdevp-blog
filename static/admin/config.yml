@@ -32,7 +32,7 @@ collections:
         widget: 'relation'
         collection: 'settings'
         file: '_data/authors.json'
-        search_fields: ['name']
+        search_fields: ['authors.name']
         value_field: 'authors.name'
         display_fields: ['authors.name']
 
