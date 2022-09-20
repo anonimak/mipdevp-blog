@@ -30,11 +30,10 @@ collections:
       - label: 'Post Author'
         name: 'author'
         widget: 'relation'
-        collection: 'authors'
-        file: 'content/authors.json'
+        collection: 'settings.authors'
         search_fields: ['name']
         value_field: '{{slug}}'
-        display_fields: ['authors.*.name']
+        display_fields: ['name']
 
   - name: 'settings'
     label: 'Settings'
@@ -44,7 +43,7 @@ collections:
     files:
       - name: 'general'
         label: 'Site Settings'
-        file: 'content/settings.json'
+        file: '_data/settings.json'
         description: 'General Site Settings'
         fields:
           - { label: 'Global title', name: 'site_title', widget: 'string' }
@@ -116,7 +115,7 @@ collections:
 
       - name: 'authors'
         label: 'Authors'
-        file: 'content/authors.json'
+        file: '_data/authors.json'
         description: 'Author descriptions'
         fields:
           - name: 'authors'
