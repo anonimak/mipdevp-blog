@@ -27,6 +27,14 @@ collections:
         max: 3
         min: 1
         default: ['general']
+      - label: 'Post Author'
+        name: 'author'
+        widget: 'relation'
+        collection: 'authors'
+        file: 'content/authors.json'
+        search_fields: ['name']
+        value_field: '{{slug}}'
+        display_fields: ['authors.*.name']
 
   - name: 'settings'
     label: 'Settings'
