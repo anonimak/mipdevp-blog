@@ -28,7 +28,7 @@
             px-4
             mx-auto
             max-w-screen-xl
-            text-center
+            md:text-center
             lg:py-16 lg:px-12
           "
         >
