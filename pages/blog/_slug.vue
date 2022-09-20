@@ -1,6 +1,16 @@
 <template>
   <article
-    class="prose lg:prose-xl mt-6 lg:mt-8 sm:px-6 md:px-8 xl:px-12 lg:max-w-7xl"
+    class="
+      prose
+      dark:prose-invert
+      lg:prose-xl
+      mt-6
+      lg:mt-8
+      sm:px-6
+      md:px-8
+      xl:px-12
+      lg:max-w-7xl
+    "
   >
     <header class="mb-12 pb-8 lg:mb-16 border-gray-200 border-b-2">
       <h1 class="mb-0 dark:text-teal-700">{{ article.title }}</h1>
@@ -10,7 +20,7 @@
       <div>
         <!-- the format date function converts the default date to a readable form -->
         <span class="text-opacity-50 text-sm">{{
-          $dayjs(article.updatedAt).fromNow()
+          $dayjs(article.updatedAt).format('DD MMMM, YYYY')
         }}</span>
       </div>
       <badge-tag v-for="tag in article.tags" :key="tag">{{ tag }}</badge-tag>
