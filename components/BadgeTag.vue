@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link :to="{ name: 'blog-slug', params: { slug: slug } }">
+  <nuxt-link :to="{ name: 'tags-slug', params: { slug: slug } }">
     <span class="badge mr-2">
       <slot></slot>
     </span>
