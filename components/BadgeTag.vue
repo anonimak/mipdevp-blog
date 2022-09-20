@@ -12,6 +12,6 @@ export default {
 </script>
 <style lang="postcss" scoped>
 .badge {
-  @apply inline-block bg-emerald-100 dark:bg-emerald-700 rounded-full px-2 py-0.5 text-sm font-semibold text-gray-700 dark:text-gray-200;
+  @apply inline-block bg-teal-200 dark:bg-teal-700 rounded-full px-2 py-0.5 text-sm font-semibold text-gray-700 dark:text-gray-200;
 }
 </style>
