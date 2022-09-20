@@ -11,6 +11,7 @@
           $dayjs(article.updatedAt).fromNow()
         }}</span>
       </div>
+      <badge-tag v-for="tag in article.tags" :key="tag">{{ tag }}</badge-tag>
     </header>
     <!-- this is where we will render the article contents -->
     <nuxt-content class="dark:text-gray-200" :document="article" />
@@ -22,10 +23,13 @@
 export default {
   async asyncData({ $content, params }) {
     //here, we will fetch the article from the article/ folder based on the name provided in the 'params.slug`
-    const article = await $content('articles', params.slug).fetch()
+    const article = await $content('articles', params.slug)
+      .where({ isactive: true })
+      .fetch()
     const [prev, next] = await $content('articles')
+      .where({ isactive: true })
       // fetch only the title and slug from the articles
-      .only(['title', 'slug', 'updatedAt'])
+      .only(['title', 'slug', 'updatedAt', 'isactive'])
       // sortby time updated, in ascending order
       .sortBy('updatedAt', 'asc')
       // get the correct slug

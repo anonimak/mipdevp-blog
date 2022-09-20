@@ -14,7 +14,7 @@
       z-10
     "
   >
-    <div class="m-auto max-w-6xl flex items-center justify-between">
+    <div class="m-auto flex items-center justify-between">
       <nuxt-link to="/">
         <img :src="navbar.logo" alt="" class="mr-3 h-7 sm:h-10" srcset="" />
       </nuxt-link>
