@@ -1,10 +1,12 @@
 <template>
-  <main class="px-4 pb-28 sm:px-6 md:px-8 xl:px-12 lg:max-w-7xl">
+  <main class="pb-28 sm:px-6 md:px-8 xl:px-12 lg:max-w-7xl">
     <div class="divide-y divide-gray-200 dark:divide-gray-600">
       <div class="space-y-2 md:space-y-5 py-8 lg:pt-16">
         <h1
           class="
-            text-3xl
+            text-4xl
+            space-y-2
+            pb-8
             font-extrabold
             leading-9
             tracking-tight

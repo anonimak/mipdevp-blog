@@ -4,7 +4,7 @@
       <div class="space-y-2 md:space-y-5 py-8 lg:pt-16">
         <h1
           class="
-            text-3xl
+            text-4xl
             font-extrabold
             leading-9
             tracking-tight
@@ -26,7 +26,8 @@
             :key="key"
             class="
               mr-3
-              text-sm
+              text-2xl
+              sm:text-3xl
               font-medium
               uppercase
               text-teal-800

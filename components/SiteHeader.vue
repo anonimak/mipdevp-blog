@@ -3,7 +3,6 @@
     id="site-header"
     class="
       w-auto
-      sm:px-4
       py-6
       sticky
       top-0
@@ -14,9 +13,19 @@
       z-10
     "
   >
-    <div class="m-auto flex items-center justify-between">
+    <div
+      class="
+        m-auto
+        flex
+        items-center
+        px-4
+        sm:px-6
+        xl:max-w-7xl xl:px-0
+        justify-between
+      "
+    >
       <nuxt-link to="/">
-        <img :src="navbar.logo" alt="" class="mr-3 h-7 sm:h-10" srcset="" />
+        <img :src="navbar.logo" alt="" class="mr-3 h-10" srcset="" />
       </nuxt-link>
 
       <div class="flex items-center text-base leading-5">

@@ -3,6 +3,7 @@
     class="min-h-screen"
     :class="$colorMode.value == 'dark' ? 'dark bg-slate-900' : 'bg-white'"
   >
+    <site-header />
     <div
       class="
         flex flex-col
@@ -15,9 +16,8 @@
         xl:max-w-7xl xl:px-0
       "
     >
-      <site-header />
       <Nuxt class="flex-grow" />
-      <site-footer />
     </div>
+    <site-footer />
   </div>
 </template>
