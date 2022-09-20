@@ -1,5 +1,7 @@
 <template>
-  <article class="prose lg:prose-xl p-4 mt-6 lg:mt-8 m-auto lg:max-w-4xl">
+  <article
+    class="prose lg:prose-xl mt-6 lg:mt-8 sm:px-6 md:px-8 xl:px-12 lg:max-w-7xl"
+  >
     <header class="mb-12 pb-8 lg:mb-16 border-gray-200 border-b-2">
       <h1 class="mb-0 dark:text-teal-700">{{ article.title }}</h1>
       <p class="dark:text-gray-200">{{ article.description }}</p>

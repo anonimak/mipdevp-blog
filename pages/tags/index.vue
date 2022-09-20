@@ -1,5 +1,5 @@
 <template>
-  <main class="px-4 pb-28 sm:px-6 md:px-8 xl:px-12 lg:max-w-6xl">
+  <main class="px-4 pb-28 sm:px-6 md:px-8 xl:px-12 lg:max-w-7xl">
     <div class="flex flex-col divide-y divide-gray-200 dark:divide-gray-600">
       <div class="space-y-2 md:space-y-5 py-8 lg:pt-16">
         <h1
@@ -8,6 +8,8 @@
             font-extrabold
             leading-9
             tracking-tight
+            text-center
+            md:text-left
             text-gray-900
             dark:text-gray-100
             sm:text-4xl sm:leading-10
@@ -18,7 +20,7 @@
         </h1>
       </div>
       <div class="flex flex-wrap">
-        <div class="mt-2 mb-2 mr-5" v-if="tags">
+        <div class="my-2 mx-auto md:mx-0" v-if="tags">
           <nuxt-link
             v-for="(value, key) in tags"
             :key="key"

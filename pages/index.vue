@@ -1,7 +1,5 @@
 <template>
-  <main
-    class="max-w-[52rem] mx-auto pb-28 sm:px-6 md:px-8 xl:px-12 lg:max-w-6xl"
-  >
+  <main class="max-w-[52rem] pb-28 sm:px-6 md:px-8 xl:px-12 lg:max-w-7xl">
     <hero />
 
     <div

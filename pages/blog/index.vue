@@ -1,5 +1,5 @@
 <template>
-  <main class="px-4 pb-28 sm:px-6 md:px-8 xl:px-12 lg:max-w-6xl">
+  <main class="px-4 pb-28 sm:px-6 md:px-8 xl:px-12 lg:max-w-7xl">
     <div class="divide-y divide-gray-200 dark:divide-gray-600">
       <div class="space-y-2 md:space-y-5 py-8 lg:pt-16">
         <h1
