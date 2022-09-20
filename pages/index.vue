@@ -1,22 +1,14 @@
 <template>
   <main
-    class="
-      max-w-[52rem]
-      mx-auto
-      px-4
-      pb-28
-      sm:px-6
-      md:px-8
-      xl:px-12
-      lg:max-w-6xl
-    "
+    class="max-w-[52rem] mx-auto pb-28 sm:px-6 md:px-8 xl:px-12 lg:max-w-6xl"
   >
     <hero />
 
     <div
       class="
         relative
-        sm:pb-12 sm:ml-[calc(2rem+1px)]
+        px-4
+        sm:pb-12
         md:ml-[calc(3.5rem+1px)]
         lg:ml-[max(calc(14.5rem+1px),calc(100%-48rem))]
       "

@@ -3,7 +3,7 @@
     id="site-header"
     class="
       w-auto
-      p-4
+      sm:px-4
       py-6
       sticky
       top-0
