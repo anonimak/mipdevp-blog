@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* durations and timing functions.              */
+.page-enter-active {
+  @apply transition-all ease-in-out duration-100;
+}
+.page-leave-active {
+  @apply transition-all ease-in-out duration-100;
+}
+.page-enter,
+.page-leave-to {
+  @apply transform translate-y-10 opacity-0;
+}
