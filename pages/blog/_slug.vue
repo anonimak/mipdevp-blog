@@ -27,8 +27,8 @@
     </header>
     <!-- this is where we will render the article contents -->
     <nuxt-content class="dark:text-gray-200" :document="article" />
-    <Disqus class="pt-10" :pageConfig="disqusConfig" />
     <prev-next :prev="prev" :next="next"></prev-next>
+    <Disqus class="pt-10" :pageConfig="disqusConfig" />
   </article>
 </template>
 
