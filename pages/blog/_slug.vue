@@ -27,6 +27,7 @@
     </header>
     <!-- this is where we will render the article contents -->
     <nuxt-content class="dark:text-gray-200" :document="article" />
+    <Disqus class="pt-10" :pageConfig="disqusConfig" />
     <prev-next :prev="prev" :next="next"></prev-next>
   </article>
 </template>
@@ -49,8 +50,13 @@ export default {
       // fetch data
       .fetch()
 
+    const disqusConfig = {
+      title: `blog-mipdevp-${article.title}`,
+      identifier: `blog-mipdevp-${article.slug}`,
+    }
+
     // return the data to be vailable for use in the file
-    return { article, prev, next }
+    return { article, prev, next, disqusConfig }
   },
 }
 </script>
