@@ -135,19 +135,19 @@ export default {
       items: [
         {
           title: 'Blog',
-          href: 'blog',
+          href: '/blog',
         },
         {
           title: 'Tags',
-          href: 'tags',
+          href: '/tags',
         },
         {
           title: 'Project',
-          href: 'project',
+          href: '/project',
         },
         {
           title: 'About',
-          href: 'about',
+          href: '/about',
         },
       ],
     }
