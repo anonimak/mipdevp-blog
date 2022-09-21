@@ -5,8 +5,8 @@
         absolute
         -inset-y-2.5 -inset-x-4
         md:-inset-y-4 md:-inset-x-6
-        sm:rounded-2xl
-        bg-slate-50/70
+        rounded-2xl
+        bg-slate-100/100
         dark:bg-slate-800/50
       "
     ></div>

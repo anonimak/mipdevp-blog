@@ -16,7 +16,7 @@
       <div>
         <h3 class="text-2xl font-bold leading-8 tracking-tight">
           <nuxt-link
-            class="text-gray-900 dark:text-gray-100"
+            class="text-gray-900 dark:text-gray-100 dark:hover:text-gray-400"
             :to="{ name: 'blog-slug', params: { slug: article.slug } }"
             >{{ article.title }}</nuxt-link
           >
@@ -29,7 +29,7 @@
               mr-3
               text-sm
               font-medium
-              uppercase
+              lowercase
               text-teal-800
               hover:text-primary-600
               dark:hover:text-teal-500 dark:text-teal-700

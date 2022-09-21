@@ -1,17 +1,7 @@
 <template>
   <header
     id="site-header"
-    class="
-      w-auto
-      py-6
-      sticky
-      top-0
-      bg-white
-      dark:bg-slate-900 dark:sm:bg-opacity-50
-      backdrop-filter
-      sm:bg-opacity-70 sm:backdrop-blur-md
-      z-10
-    "
+    class="w-auto py-6 sticky top-0 backdrop-filter backdrop-blur-md z-10"
   >
     <div
       class="
@@ -31,25 +21,17 @@
       <div class="flex items-center text-base leading-5">
         <div class="hidden sm:block">
           <nuxt-link
-            to="/blog"
-            class="p-1 font-medium text-teal-800 dark:text-teal-500 sm:p-4"
-            >Blog</nuxt-link
-          >
-          <nuxt-link
-            to="/tags"
-            class="p-1 font-medium text-teal-800 dark:text-teal-500 sm:p-4"
-            >Tags</nuxt-link
-          >
-          <nuxt-link
-            to="/project"
-            class="p-1 font-medium text-teal-800 dark:text-teal-500 sm:p-4"
-          >
-            Project
-          </nuxt-link>
-          <nuxt-link
-            to="/about"
-            class="p-1 font-medium text-teal-800 dark:text-teal-500 sm:p-4"
-            >About</nuxt-link
+            v-for="(item, index) in items"
+            :key="index"
+            :to="item.href"
+            class="
+              p-1
+              text-lg text-teal-800
+              dark:text-teal-500
+              sm:p-4
+              hover:text-teal-900
+            "
+            >{{ item.title }}</nuxt-link
           >
         </div>
         <button
@@ -85,20 +67,8 @@
           class="sm:hidden ml-1 h-8 w-8 rounded p-1 sm:ml-4"
           @click="menu = !menu"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-6 h-6 stroke-teal-800 dark:stroke-teal-500"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-            />
-          </svg>
+          <icon-menu-bar v-if="!menu" />
+          <icon-menu-bar-close v-else />
         </div>
       </div>
     </div>
@@ -116,7 +86,7 @@
           <li v-for="(item, index) in items" :key="index">
             <nuxt-link
               :to="item.href"
-              class="text-teal-800 dark:text-teal-500 p-4 block"
+              class="text-lg text-teal-800 dark:text-teal-500 p-4 block"
             >
               {{ item.title }}
             </nuxt-link>
@@ -128,7 +98,14 @@
 </template>
 
 <script>
+import IconMenuBar from '~/assets/icons/bars-3.svg?inline'
+import IconMenuBarClose from '~/assets/icons/x-mark.svg?inline'
+
 export default {
+  components: {
+    IconMenuBar,
+    IconMenuBarClose,
+  },
   data() {
     return {
       menu: false,
@@ -164,5 +141,32 @@ export default {
         this.$colorMode.preference === 'light' ? 'dark' : 'light'
     },
   },
+  mounted() {
+    this.$nextTick(function () {
+      window.addEventListener('scroll', function () {
+        var navbar = document.getElementById('site-header')
+        var nav_classes = navbar.classList
+        if (document.documentElement.scrollTop >= 60) {
+          if (nav_classes.contains('dark:bg-black/30') === false) {
+            nav_classes.toggle('dark:bg-black/30')
+          }
+        } else {
+          if (nav_classes.contains('dark:bg-black/30') === true) {
+            nav_classes.toggle('dark:bg-black/30')
+          }
+        }
+      })
+    })
+  },
 }
 </script>
+
+<style>
+a.nuxt-link-active {
+  @apply font-semibold;
+}
+/* exact link will show the primary color for only the exact matching link */
+a.nuxt-link-exact-active {
+  @apply text-teal-800;
+}
+</style>

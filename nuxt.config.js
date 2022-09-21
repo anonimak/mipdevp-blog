@@ -15,21 +15,16 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['@/assets/css/main.css'],
+  css: ['~/assets/css/main.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['@/plugins/disqus.js'],
+  plugins: ['@/plugins/disqus'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [
-    '@nuxt/postcss8',
-    '@nuxtjs/color-mode',
-    '@vueuse/nuxt',
-    '@nuxtjs/composition-api/module',
-  ],
+  buildModules: ['@nuxt/postcss8', '@nuxtjs/color-mode', '@nuxtjs/svg'],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -78,6 +73,18 @@ export default {
     exposeConfig: false,
     config: {},
     jit: true,
+  },
+
+  svg: {
+    vueSvgLoader: {
+      // vue-svg-loader options
+    },
+    svgSpriteLoader: {
+      // svg-sprite-loader options
+    },
+    fileLoader: {
+      // file-loader options
+    },
   },
 
   pageTransition: 'page',

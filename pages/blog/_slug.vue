@@ -23,7 +23,9 @@
           $dayjs(article.updatedAt).format('DD MMMM, YYYY')
         }}</span>
       </div>
-      <badge-tag v-for="tag in article.tags" :key="tag">{{ tag }}</badge-tag>
+      <badge-tag v-for="tag in article.tags" :key="tag" :slug="tag">{{
+        tag
+      }}</badge-tag>
     </header>
     <!-- this is where we will render the article contents -->
     <nuxt-content class="dark:text-gray-200" :document="article" />

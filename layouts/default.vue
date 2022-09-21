@@ -1,6 +1,6 @@
 <template>
   <div
-    class="min-h-screen"
+    class="min-h-screen transition-colors duration-[50]"
     :class="$colorMode.value == 'dark' ? 'dark bg-slate-900' : 'bg-white'"
   >
     <site-header />

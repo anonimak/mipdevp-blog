@@ -11,7 +11,7 @@
             leading-9
             tracking-tight
             text-gray-900
-            dark:text-gray-100
+            dark:text-teal-700
             sm:text-4xl sm:leading-10
             md:text-6xl md:leading-14
           "
