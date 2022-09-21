@@ -7,9 +7,9 @@
       sticky
       top-0
       bg-white
-      dark:bg-slate-900 dark:bg-opacity-50
-      bg-opacity-70
-      backdrop-filter backdrop-blur-md
+      dark:bg-slate-900 dark:sm:bg-opacity-50
+      backdrop-filter
+      sm:bg-opacity-70 sm:backdrop-blur-md
       z-10
     "
   >
@@ -103,18 +103,27 @@
       </div>
     </div>
     <!-- Mobile nav list -->
-    <nav class="w-full" v-show="menu">
-      <ul class="flex flex-col text-center">
-        <li v-for="(item, index) in items" :key="index">
-          <nuxt-link
-            :to="item.href"
-            class="text-teal-800 dark:text-teal-500 p-6 block"
-          >
-            {{ item.title }}
-          </nuxt-link>
-        </li>
-      </ul>
-    </nav>
+    <transition
+      enter-active-class="transition ease-out duration-100"
+      enter-class="transform opacity-0 -translate-y-6"
+      enter-to-class="transform opacity-100"
+      leave-active-class="transition ease-in duration-75"
+      leave-class="transform opacity-100"
+      leave-to-class="transform opacity-0 -translate-y-6"
+    >
+      <nav class="w-full" v-show="menu" ref="navitems">
+        <ul class="flex flex-col text-center">
+          <li v-for="(item, index) in items" :key="index">
+            <nuxt-link
+              :to="item.href"
+              class="text-teal-800 dark:text-teal-500 p-4 block"
+            >
+              {{ item.title }}
+            </nuxt-link>
+          </li>
+        </ul>
+      </nav>
+    </transition>
   </header>
 </template>
 

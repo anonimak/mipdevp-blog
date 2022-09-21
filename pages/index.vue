@@ -11,7 +11,7 @@
         lg:ml-[max(calc(14.5rem+1px),calc(100%-48rem))]
       "
     >
-      <div class="space-y-16">
+      <div class="space-y-10 sm:space-y-16">
         <card-article-large
           v-for="(article, index) in articles"
           :key="index"
