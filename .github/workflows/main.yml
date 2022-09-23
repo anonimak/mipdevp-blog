@@ -12,7 +12,7 @@ jobs:
         os: [ubuntu-latest]
         node: [16]
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           token: ${{ secrets.PUSH_TOKEN }}
       - name: Setup node env
@@ -38,4 +38,4 @@ jobs:
           username: ${{ secrets.SSH_MIPDEVP_USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
-          script: 'cd ~/www/blog && ./server_deploy.sh'
+          script: 'cd ~/repositories/mipdevp-blog && sh server_deploy.sh'
