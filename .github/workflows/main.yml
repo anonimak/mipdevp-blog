@@ -2,7 +2,7 @@ name: CD
 
 on:
   push:
-    branches: [testing]
+    branches: [master]
 
 jobs:
   deploy:
@@ -34,8 +34,8 @@ jobs:
       - name: Deploy to production
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USERNAME }}
+          host: ${{ secrets.SSH_MIPDEVP_HOST }}
+          username: ${{ secrets.SSH_MIPDEVP_USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
-          script: 'cd ~/mipdevp-blog && ./server_deploy.sh'
+          script: 'cd ~/www/blog && ./server_deploy.sh'

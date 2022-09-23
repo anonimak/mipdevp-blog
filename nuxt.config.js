@@ -72,7 +72,6 @@ export default {
     configPath: 'tailwind.config.js',
     exposeConfig: false,
     config: {},
-    jit: true,
   },
 
   svg: {
