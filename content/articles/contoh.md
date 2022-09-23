@@ -1,6 +1,10 @@
 ---
 title: Contoh 1
+date: 2022-09-23T03:45:22.307Z
 description: Ini contoh 1
+isactive: true
+tags:
+  - test
 ---
 
 ## Contoh 1
