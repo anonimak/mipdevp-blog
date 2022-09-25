@@ -1,5 +1,6 @@
 ---
 title: Contoh 1
+author: sanonimak@gmail.com
 date: 2022-09-23T03:45:22.307Z
 description: Ini contoh 1
 isactive: true
