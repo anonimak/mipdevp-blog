@@ -1,0 +1,21 @@
+{
+  "favicon": "/blog/img/logo.png",
+  "navbar": {
+    "logo": "/blog/img/logo.png"
+  },
+  "site_title": "MIPDEVP",
+  "landings": {
+    "hero": {
+      "title": "Opini, Tutorial, Panduan.",
+      "description": "blog yang terangkum informasi tentang opini-opini isu programming yang populer maupun terkini dari pandangan MIPDEVP, memberikan tutorial dan panduang yang mudah-mudahan sampai kepada para pencari tutorial ^^"
+    },
+    "front_limit": 3
+  },
+  "blogs": {
+    "front_limit": 10,
+    "author": "sanonimak"
+  },
+  "footer": {
+    "description": "MIPDEVP"
+  }
+}
