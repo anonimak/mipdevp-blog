@@ -1,5 +1,6 @@
 ---
 title: Rupit coronae
+author: sanonimak@gmail.com
 date: 2022-09-20T14:35:47.972Z
 description: Cristis qui et viridi suos quaeque diramque
 isactive: true
