@@ -18,6 +18,10 @@ export default {
     base: '/blog/',
   },
 
+  static: {
+    prefix: false,
+  },
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['~/assets/css/main.css'],
 

@@ -39,10 +39,10 @@ export default {
   async asyncData({ $content, params }) {
     //here, we will fetch the article from the article/ folder based on the name provided in the 'params.slug`
     const article = await $content('articles', params.slug)
-      .where({ isactive: true })
+      .where({ isactive: { $ne: false } })
       .fetch()
     const [prev, next] = await $content('articles')
-      .where({ isactive: true })
+      .where({ isactive: { $ne: false } })
       // fetch only the title and slug from the articles
       .only(['title', 'slug', 'updatedAt', 'isactive'])
       // sortby time updated, in ascending order

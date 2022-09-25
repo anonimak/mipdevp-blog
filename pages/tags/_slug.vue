@@ -38,8 +38,8 @@ export default {
   async asyncData({ $content, params }) {
     const articles = await $content('articles')
       .only(['title', 'slug', 'updatedAt', 'description', 'tags'])
-      .where({ isactive: true, tags: { $contains: params.slug } })
-      .sortBy('updatedAt', 'desc')
+      .where({ isactive: { $ne: false }, tags: { $contains: params.slug } })
+      .sortBy('date', 'desc')
       .fetch()
 
     const title = params.slug

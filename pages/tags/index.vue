@@ -47,8 +47,8 @@ export default {
   async asyncData({ $content, store }) {
     const articles = await $content('articles')
       .only(['tags'])
-      .where({ isactive: true })
-      .sortBy('updatedAt', 'desc')
+      .where({ isactive: { $ne: false } })
+      .sortBy('date', 'desc')
       .limit(store.state.settings.landings.front_limit)
       .fetch()
 
