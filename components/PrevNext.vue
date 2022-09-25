@@ -16,7 +16,7 @@
     <!-- if prev data is available display the link -->
     <nuxt-link
       v-if="prev"
-      :to="{ name: 'blog-slug', params: { slug: prev.slug } }"
+      :to="{ name: 'articles-slug', params: { slug: prev.slug } }"
       class="flex gap-2"
     >
       <span class="my-auto"
@@ -40,7 +40,7 @@
     <!-- if prev data is available display the link -->
     <nuxt-link
       v-if="next"
-      :to="{ name: 'blog-slug', params: { slug: next.slug } }"
+      :to="{ name: 'articles-slug', params: { slug: next.slug } }"
       class="next flex gap-2"
     >
       <span>{{ next.title }}</span>

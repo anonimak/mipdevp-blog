@@ -1,7 +1,33 @@
 <template>
   <main class="max-w-[52rem] pb-28 sm:px-6 md:px-8 xl:px-12 lg:max-w-7xl">
     <hero />
-
+    <h2
+      class="
+        text-2xl
+        space-y-2
+        font-bold
+        leading-9
+        tracking-tight
+        text-gray-900
+        dark:text-teal-700
+        sm:text-2xl sm:leading-10
+        md:text-3xl md:leading-14
+      "
+    >
+      Latest Article
+    </h2>
+    <hr
+      class="
+        my-2
+        w-20
+        h-1
+        bg-gray-100
+        rounded-r
+        border-0
+        mb-10
+        dark:bg-gray-700
+      "
+    />
     <div
       class="
         relative

@@ -15,7 +15,12 @@
       "
     >
       <nuxt-link to="/">
-        <img :src="navbar.logo" alt="" class="mr-3 h-10" srcset="" />
+        <img
+          :src="'~/static' + navbar.logo"
+          alt=""
+          class="mr-3 h-10"
+          srcset=""
+        />
       </nuxt-link>
 
       <div class="flex items-center text-base leading-5">
@@ -111,8 +116,8 @@ export default {
       menu: false,
       items: [
         {
-          title: 'Blog',
-          href: '/blog',
+          title: 'Articles',
+          href: '/articles',
         },
         {
           title: 'Tags',

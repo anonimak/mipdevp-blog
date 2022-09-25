@@ -17,7 +17,7 @@
         <h3 class="text-2xl font-bold leading-8 tracking-tight">
           <nuxt-link
             class="text-gray-900 dark:text-gray-100 dark:hover:text-gray-400"
-            :to="{ name: 'blog-slug', params: { slug: article.slug } }"
+            :to="{ name: 'articles-slug', params: { slug: article.slug } }"
             >{{ article.title }}</nuxt-link
           >
         </h3>

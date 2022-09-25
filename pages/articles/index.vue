@@ -16,7 +16,7 @@
             md:text-6xl md:leading-14
           "
         >
-          Blog
+          Articles
         </h1>
         <input-search />
       </div>

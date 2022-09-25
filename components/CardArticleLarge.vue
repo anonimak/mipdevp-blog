@@ -59,7 +59,7 @@
     </div>
     <nuxt-link
       class="flex items-center text-sm text-sky-500 font-medium"
-      :to="{ name: 'blog-slug', params: { slug: slug } }"
+      :to="{ name: 'articles-slug', params: { slug: slug } }"
     >
       <span class="relative">Read more</span>
       <svg
