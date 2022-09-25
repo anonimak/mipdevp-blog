@@ -16,6 +16,7 @@
         focus:border-primary-500 focus:ring-primary-500
         dark:border-gray-900 dark:bg-gray-800 dark:text-gray-100
       "
+      v-model="search"
     /><svg
       class="absolute right-3 top-3 h-5 w-5 text-gray-400 dark:text-gray-300"
       xmlns="http://www.w3.org/2000/svg"
@@ -32,3 +33,23 @@
     </svg>
   </div>
 </template>
+<script>
+export default {
+  props: {
+    value: {
+      type: String,
+      default: '',
+    },
+  },
+  data() {
+    return {
+      search: this.value,
+    }
+  },
+  watch: {
+    search(currentValue) {
+      this.$emit('input', currentValue)
+    },
+  },
+}
+</script>

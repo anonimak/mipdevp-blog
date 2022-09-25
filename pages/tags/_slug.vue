@@ -19,7 +19,7 @@
         >
           {{ title }}
         </h1>
-        <input-search />
+        <input-search v-model="search" />
       </div>
 
       <ul>
@@ -45,6 +45,31 @@ export default {
     const title = params.slug
 
     return { articles, title }
+  },
+
+  data() {
+    return {
+      search: '',
+    }
+  },
+
+  watch: {
+    async search(search) {
+      if (!search) {
+        // this.search = []
+        return
+      }
+      this.articles = await this.$content('articles')
+        .only(['title', 'slug', 'updatedAt', 'description', 'tags'])
+        .sortBy(['title', 'slug', 'updatedAt', 'description', 'tags'])
+        .where({
+          isactive: { $ne: false },
+          tags: { $contains: this.$route.params.slug },
+        })
+        .limit(10)
+        .search(search)
+        .fetch()
+    },
   },
 }
 </script>

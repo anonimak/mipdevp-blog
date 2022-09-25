@@ -18,7 +18,7 @@
         >
           Articles
         </h1>
-        <input-search />
+        <input-search v-model="search" />
       </div>
 
       <ul>
@@ -27,6 +27,7 @@
         </li>
       </ul>
     </div>
+    <!-- <Pagination :nextPage="nextPage" :pageNo="1" urlPrefix="/blog/all" /> -->
   </main>
 </template>
 
@@ -34,14 +35,41 @@
 import CardArticleLarge from '~/components/CardArticleLarge.vue'
 export default {
   components: { CardArticleLarge },
-  async asyncData({ $content }) {
+
+  async asyncData({ $content, store, params }) {
     const articles = await $content('articles')
       .only(['title', 'slug', 'updatedAt', 'description', 'tags'])
-      .where({ isactive: true })
-      .sortBy('updatedAt', 'desc')
+      .where({ isactive: { $ne: false } })
+      .limit(store.state.settings.blogs.front_limit)
+      .sortBy('date', 'desc')
       .fetch()
+    if (!articles.length) {
+      return error({ statusCode: 404, message: 'No articles found!' })
+    }
 
     return { articles }
+  },
+
+  data() {
+    return {
+      search: '',
+    }
+  },
+
+  watch: {
+    async search(search) {
+      if (!search) {
+        // this.search = []
+        return
+      }
+      this.articles = await this.$content('articles')
+        .only(['title', 'slug', 'updatedAt', 'description', 'tags'])
+        .sortBy(['title', 'slug', 'updatedAt', 'description', 'tags'])
+        .where({ isactive: { $ne: false } })
+        .limit(10)
+        .search(search)
+        .fetch()
+    },
   },
 }
 </script>
