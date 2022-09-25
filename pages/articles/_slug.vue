@@ -49,7 +49,7 @@
           sm:h-[calc(100vh-5rem)]
         "
       >
-        <card-author />
+        <card-author :article="article" />
         <card-tag class="mt-4" :articles="articles" />
       </div>
     </div>

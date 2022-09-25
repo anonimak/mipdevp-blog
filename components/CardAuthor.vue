@@ -13,23 +13,22 @@
       <div class="flex-shrink-0 hidden mr-3 sm:block">
         <img
           alt="Paul Clapton"
-          src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
+          :src="author.authorimage"
           class="object-cover w-16 h-16 rounded-lg shadow-sm"
         />
       </div>
       <div>
         <h5 class="text-xl font-bold text-gray-900 dark:text-gray-200">
-          Anonimak
+          {{ author.name }}
         </h5>
 
-        <p class="mt-1 text-xs font-medium text-teal-500">@anonimak</p>
+        <p class="mt-1 text-xs font-medium text-teal-500">{{ author.email }}</p>
       </div>
     </div>
 
     <div class="mt-4 sm:pr-8">
       <p class="text-sm text-gray-500 dark:text-gray-400">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. At velit illum
-        provident a, ipsa maiores deleniti consectetur nobis et eaque.
+        {{ author.shortbio }}
       </p>
     </div>
 
@@ -38,15 +37,27 @@
         <dt class="text-sm font-medium text-gray-600 dark:text-gray-300">
           Published
         </dt>
-        <dd class="text-xs text-gray-500">31st June, 2021</dd>
-      </div>
-
-      <div class="flex flex-col-reverse ml-3 sm:ml-6">
-        <dt class="text-sm font-medium text-gray-600 dark:text-gray-300">
-          Reading time
-        </dt>
-        <dd class="text-xs text-gray-500">3 minute</dd>
+        <dd class="text-xs text-gray-500">
+          {{ $dayjs(article.updatedAt).format('DD MMMM, YYYY') }}
+        </dd>
       </div>
     </dl>
   </div>
 </template>
+<script>
+export default {
+  props: ['article'],
+  data() {
+    return {
+      author: {},
+    }
+  },
+  async fetch() {
+    const author = await this.$content('authors')
+      .where({ email: this.article.author })
+      .limit(1)
+      .fetch()
+    this.author = author[0]
+  },
+}
+</script>
