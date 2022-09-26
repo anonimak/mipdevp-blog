@@ -116,7 +116,21 @@ collections:
                   class: 'thumb',
                   required: false,
                 }
-
+          - label: 'About Settings'
+            name: 'about'
+            widget: 'object'
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string' }
+              - { label: 'Sub Title', name: 'sub_title', widget: 'string' }
+              - label: 'Social Media'
+                name: 'social_media'
+                widget: 'object'
+                fields:
+                  - { label: 'Email', name: 'email', widget: 'string' }
+                  - { label: 'Youtube', name: 'youtube', widget: 'string' }
+                  - { label: 'Linkedin', name: 'linkedin', widget: 'string' }
+                  - { label: 'Instagram', name: 'instagram', widget: 'string' }
+              - { label: 'Body About', name: 'body', widget: 'markdown' }
           - label: 'Footer Settings'
             name: 'footer'
             widget: 'object'
