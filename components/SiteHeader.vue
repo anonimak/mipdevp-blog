@@ -118,10 +118,10 @@ export default {
           title: 'Tags',
           href: '/tags',
         },
-        {
-          title: 'Project',
-          href: '/project',
-        },
+        // {
+        //   title: 'Project',
+        //   href: '/project',
+        // },
         {
           title: 'About',
           href: '/about',
