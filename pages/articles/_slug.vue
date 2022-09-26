@@ -23,7 +23,7 @@
         <div>
           <!-- the format date function converts the default date to a readable form -->
           <span class="text-opacity-50 text-sm">{{
-            $dayjs(article.updatedAt).format('DD MMMM, YYYY')
+            $dayjs(article.date).format('DD MMMM, YYYY')
           }}</span>
         </div>
         <badge-tag v-for="tag in article.tags" :key="tag" :slug="tag">{{
@@ -66,9 +66,9 @@ export default {
     const [prev, next] = await $content('articles')
       .where({ isactive: { $ne: false } })
       // fetch only the title and slug from the articles
-      .only(['title', 'slug', 'updatedAt', 'isactive'])
+      .only(['title', 'slug', 'date', 'isactive'])
       // sortby time updated, in ascending order
-      .sortBy('updatedAt', 'asc')
+      .sortBy('date', 'asc')
       // get the correct slug
       .surround(params.slug)
       // fetch data
@@ -80,7 +80,7 @@ export default {
     }
 
     const articles = await $content('articles')
-      .only(['title', 'slug', 'updatedAt', 'description', 'tags'])
+      .only(['title', 'slug', 'date', 'description', 'tags'])
       .where({
         isactive: { $ne: false },
         slug: { $ne: article.slug },

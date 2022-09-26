@@ -38,7 +38,7 @@ export default {
 
   async asyncData({ $content, store, params }) {
     const articles = await $content('articles')
-      .only(['title', 'slug', 'updatedAt', 'description', 'tags'])
+      .only(['title', 'slug', 'date', 'description', 'tags'])
       .where({ isactive: { $ne: false } })
       .limit(store.state.settings.blogs.front_limit)
       .sortBy('date', 'desc')
@@ -63,8 +63,8 @@ export default {
         return
       }
       this.articles = await this.$content('articles')
-        .only(['title', 'slug', 'updatedAt', 'description', 'tags'])
-        .sortBy(['title', 'slug', 'updatedAt', 'description', 'tags'])
+        .only(['title', 'slug', 'date', 'description', 'tags'])
+        .sortBy(['title', 'slug', 'date', 'description', 'tags'])
         .where({ isactive: { $ne: false } })
         .limit(10)
         .search(search)

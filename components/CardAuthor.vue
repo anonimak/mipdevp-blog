@@ -38,7 +38,7 @@
           Published
         </dt>
         <dd class="text-xs text-gray-500">
-          {{ $dayjs(article.updatedAt).format('DD MMMM, YYYY') }}
+          {{ $dayjs(article.date).format('DD MMMM, YYYY') }}
         </dd>
       </div>
     </dl>

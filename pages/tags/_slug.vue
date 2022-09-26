@@ -37,7 +37,7 @@ export default {
   components: { CardArticleLarge },
   async asyncData({ $content, params }) {
     const articles = await $content('articles')
-      .only(['title', 'slug', 'updatedAt', 'description', 'tags'])
+      .only(['title', 'slug', 'date', 'description', 'tags'])
       .where({ isactive: { $ne: false }, tags: { $contains: params.slug } })
       .sortBy('date', 'desc')
       .fetch()
@@ -60,8 +60,8 @@ export default {
         return
       }
       this.articles = await this.$content('articles')
-        .only(['title', 'slug', 'updatedAt', 'description', 'tags'])
-        .sortBy(['title', 'slug', 'updatedAt', 'description', 'tags'])
+        .only(['title', 'slug', 'date', 'description', 'tags'])
+        .sortBy(['title', 'slug', 'date', 'description', 'tags'])
         .where({
           isactive: { $ne: false },
           tags: { $contains: this.$route.params.slug },

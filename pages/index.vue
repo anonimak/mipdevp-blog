@@ -50,7 +50,7 @@
             {{ article.description }}
           </template>
           <template v-slot:publish-date>
-            {{ $dayjs(article.updatedAt).format('DD MMMM, YYYY') }}
+            {{ $dayjs(article.date).format('DD MMMM, YYYY') }}
           </template>
           <template v-slot:tag-field>
             <div v-if="article.tags">
@@ -72,7 +72,7 @@
 export default {
   async asyncData({ $content, store }) {
     const articles = await $content('articles')
-      .only(['title', 'slug', 'updatedAt', 'description', 'tags'])
+      .only(['title', 'slug', 'date', 'description', 'tags'])
       .where({ isactive: { $ne: false } })
       .sortBy('date', 'desc')
       .limit(store.state.settings.landings.front_limit)

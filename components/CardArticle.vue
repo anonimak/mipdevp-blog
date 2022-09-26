@@ -8,7 +8,7 @@
         class="text-base font-medium leading-6 text-gray-500 dark:text-gray-400"
       >
         <time datetime="2019-10-11T00:00:00.000Z">{{
-          $dayjs(article.updatedAt).format('DD MMMM, YYYY')
+          $dayjs(article.date).format('DD MMMM, YYYY')
         }}</time>
       </dd>
     </dl>
