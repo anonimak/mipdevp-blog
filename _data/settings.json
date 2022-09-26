@@ -17,5 +17,16 @@
   },
   "footer": {
     "description": "MIPDEVP"
+  },
+  "about": {
+    "title": "MIPDEVP BLOG",
+    "sub_title": "tentang blog ini",
+    "social_media": {
+      "email": "https://mipdevp@gmail.com",
+      "youtube": "https://www.youtube.com/c/MipdevpChannel",
+      "instagram": "https://www.instagram.com/mipdevp/",
+      "linkedin": "https://www.youtube.com/c/MipdevpChannel"
+    },
+    "body": "MIPDEVP (PT. Berkarya Bareng Bareng) adalah Perusahaan Startup Digital yang bergerak di bidang jasa pembuatan aplikasi dan website yang dipercaya banyak Klien sejak tahun 2018.\n\n* Mengutamakan proses bisnis yang ada, pengalaman dan kenyamanan penggunaan aplikasi.\n* Memastikan detail yang informatif dan tampilan yang memikat dalam membangun aplikasi maupun website.\n* Memprioritaskan Digital Presence dan Brand Awareness untuk kemajuan Perusahaan Anda.\n\nKami menyediakan solusi dalam menyediakan aplikasi teroptimasi yang berguna untuk kemajuan dan kelancaran bisnis anda. MIPDEVP dapat menjadi jembatan dalam mewujudkan kemajuan usaha Anda!"
   }
 }
