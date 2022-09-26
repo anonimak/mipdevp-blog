@@ -42,6 +42,7 @@ export default {
     '@nuxt/content',
     '@nuxtjs/dayjs',
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/google-analytics',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -91,6 +92,15 @@ export default {
     },
     fileLoader: {
       // file-loader options
+    },
+  },
+
+  googleAnalytics: {
+    id: process.env.GOOGLE_ANALYTICS_ID, // Use as fallback if no runtime config is provided
+  },
+  publicRuntimeConfig: {
+    googleAnalytics: {
+      id: process.env.GOOGLE_ANALYTICS_ID,
     },
   },
 

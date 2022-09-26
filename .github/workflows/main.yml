@@ -23,6 +23,9 @@ jobs:
         run: npm install
       - name: Generate
         run: npm run generate
+      - name: Setup .env
+        env:
+          GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
       - name: Commit built assets
         run: |
           git config --local user.email "action@github.com"
