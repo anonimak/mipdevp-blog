@@ -28,7 +28,7 @@
             hover:text-teal-600 hover:font-normal
             dark:text-gray-400 dark:hover:text-teal-500
           "
-          :to="article.slug"
+          :to="{ name: 'articles-slug', params: { slug: article.slug } }"
         >
           {{ article.title }}
         </nuxt-link>

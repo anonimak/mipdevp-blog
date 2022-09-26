@@ -1,3 +1,6 @@
+const getSettings = () =>
+  import('~/_data/settings.json').then((m) => m.default || m)
+
 export const state = () => ({
   settings: [],
 })
@@ -8,7 +11,7 @@ export const mutations = {
 
 export const actions = {
   async nuxtServerInit({ commit }, { $content }) {
-    const settings = await $content('settings').fetch()
+    const settings = await getSettings()
     await commit('setSettings', settings)
   },
 }
