@@ -96,7 +96,7 @@ export default {
         { network: 'whatsapp', icon: ['fab', 'whatsapp'], color: '#25d366' },
       ],
       sharing: {
-        url: process.env.baseUrl + this.$route.fullPath,
+        url: this.$config.baseURL + this.$route.fullPath,
         title: '',
         description: '',
         quote: '',
