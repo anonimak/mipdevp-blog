@@ -29,6 +29,26 @@
         <badge-tag v-for="tag in article.tags" :key="tag" :slug="tag">{{
           tag
         }}</badge-tag>
+
+        <div class="flex my-2">
+          <ShareNetwork
+            v-for="network in networks"
+            :network="network.network"
+            :key="network.network"
+            :style="{ backgroundColor: network.color }"
+            :url="sharing.url"
+            :title="sharing.title"
+            :description="sharing.description"
+            :quote="sharing.quote"
+            :hashtags="sharing.hashtags"
+            :twitterUser="sharing.twitterUser"
+          >
+            <font-awesome-icon
+              :icon="network.icon"
+              class="text-white fa-fw fa-lg mx-2"
+            />
+          </ShareNetwork>
+        </div>
       </header>
       <!-- this is where we will render the article contents -->
       <nuxt-content class="dark:text-gray-200" :document="article" />
@@ -58,50 +78,103 @@
 
 <script>
 export default {
-  async asyncData({ $content, params }) {
+  data() {
+    return {
+      article: {},
+      articles: [],
+      disqusConfig: {},
+      prev: null,
+      next: null,
+      networks: [
+        { network: 'facebook', icon: ['fab', 'facebook-f'], color: '#1877f2' },
+        { network: 'twitter', icon: ['fab', 'twitter'], color: '#1da1f2' },
+        {
+          network: 'telegram',
+          icon: ['fab', 'telegram-plane'],
+          color: '#0088cc',
+        },
+        { network: 'whatsapp', icon: ['fab', 'whatsapp'], color: '#25d366' },
+      ],
+      sharing: {
+        url: process.env.baseUrl + this.$route.fullPath,
+        title: '',
+        description: '',
+        quote: '',
+        hashtags: '',
+        twitterUser: 'mipdevp',
+      },
+    }
+  },
+  watch: {
+    article: function (val) {
+      this.sharing.title = this.article.title
+      this.sharing.description = this.article.description
+      this.sharing.hashtags = this.article.tags.toString()
+    },
+  },
+  async fetch() {
     //here, we will fetch the article from the article/ folder based on the name provided in the 'params.slug`
-    const article = await $content('articles', params.slug)
+    this.article = await this.$content('articles', this.$route.params.slug)
       .where({ isactive: { $ne: false } })
       .fetch()
-    const [prev, next] = await $content('articles')
+
+    const [prev, next] = await this.$content('articles')
       .where({ isactive: { $ne: false } })
       // fetch only the title and slug from the articles
       .only(['title', 'slug', 'date', 'isactive'])
       // sortby time updated, in ascending order
       .sortBy('date', 'asc')
       // get the correct slug
-      .surround(params.slug)
+      .surround(this.$route.params.slug)
       // fetch data
       .fetch()
 
-    const disqusConfig = {
-      title: `blog-mipdevp-${article.title}`,
-      identifier: `blog-mipdevp-${article.slug}`,
+    this.prev = prev
+    this.next = next
+
+    this.disqusConfig = {
+      title: `blog-mipdevp-${this.article.title}`,
+      identifier: `blog-mipdevp-${this.article.slug}`,
     }
 
-    const articles = await $content('articles')
+    this.articles = await this.$content('articles')
       .only(['title', 'slug', 'date', 'description', 'tags'])
       .where({
         isactive: { $ne: false },
-        slug: { $ne: article.slug },
-        tags: { $containsAny: article.tags },
+        slug: { $ne: this.article.slug },
+        tags: { $containsAny: this.article.tags },
       })
       .limit(3)
       .sortBy('date', 'desc')
       .fetch()
 
     // return the data to be vailable for use in the file
-    return { article, prev, next, disqusConfig, articles }
+    // return { article, prev, next, disqusConfig, articles }
   },
 
   head() {
     return {
-      title: this.article.title,
+      title: `${this.article.title} - mipdevp-blog`,
       meta: [
         {
-          hid: 'description',
-          name: 'description',
+          hid: 'article:published_time',
+          property: 'article:published_time',
+          content: this.article.date,
+        },
+        {
+          hid: 'article:tag',
+          property: 'article:tag',
+          content: this.article.tags ? this.article.tags.toString() : '',
+        },
+        {
+          hid: 'article:description',
+          name: 'article:description',
           content: this.article.description,
+        },
+        {
+          hid: 'article:title',
+          name: 'article:title',
+          content: this.article.title,
         }, // Open Graph
         { hid: 'og:title', property: 'og:title', content: this.article.title },
         {
@@ -118,6 +191,11 @@ export default {
           hid: 'twitter:description',
           name: 'twitter:description',
           content: this.article.description,
+        },
+        {
+          hid: 'twitter:card',
+          name: 'twitter:card',
+          content: 'summary_large_image',
         },
       ],
     }

@@ -8,7 +8,12 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'blog yang terangkum informasi tentang opini-opini isu programming yang populer maupun terkini dari pandangan MIPDEVP, memberikan tutorial dan panduang yang mudah-mudahan sampai kepada para pencari tutorial ^^',
+      },
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/blog/favicon.png' }],
@@ -23,10 +28,13 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  // css: ['~/assets/css/main.css'],
+  css: [
+    // '~/assets/css/main.css',
+    '@fortawesome/fontawesome-svg-core/styles.css',
+  ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['@/plugins/disqus'],
+  plugins: ['@/plugins/disqus', '~/plugins/fontawesome.js'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -43,6 +51,7 @@ export default {
     '@nuxtjs/dayjs',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/google-analytics',
+    'vue-social-sharing/nuxt',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -102,6 +111,10 @@ export default {
     googleAnalytics: {
       id: process.env.GOOGLE_ANALYTICS_ID,
     },
+  },
+
+  env: {
+    baseUrl: process.env.BASE_URL || 'http://localhost:3000',
   },
 
   pageTransition: 'page',
