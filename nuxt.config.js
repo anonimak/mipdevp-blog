@@ -1,3 +1,5 @@
+import { getHighlighter, IHighlighterPaths } from 'shiki'
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -68,7 +70,18 @@ export default {
   },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
-  content: {},
+  content: {
+    markdown: {
+      async highlighter() {
+        const highlighter = await getHighlighter({
+          theme: 'one-dark-pro',
+        })
+        return (rawCode, lang) => {
+          return highlighter.codeToHtml(rawCode, { lang })
+        }
+      },
+    },
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
