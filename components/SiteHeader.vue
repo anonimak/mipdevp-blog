@@ -134,6 +134,11 @@ export default {
       return this.$store.state.settings.navbar
     },
   },
+  watch: {
+    $route() {
+      this.menu = false
+    },
+  },
   methods: {
     changeMode() {
       console.log(this.$colorMode.value)
