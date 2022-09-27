@@ -25,7 +25,7 @@ jobs:
         run: npm run generate
         env:
           GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
-          BASE_URL: https://mipdevp.com/blog
+          BASE_URL: 'https://mipdevp.com/blog'
       - name: Commit built assets
         run: |
           git config --local user.email "action@github.com"
