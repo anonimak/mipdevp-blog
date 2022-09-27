@@ -26,19 +26,20 @@ Nec pressoque proque **est praedae** mea namque matrum comitavit tectus vigil,
 *hoc manus*. Iovis ipse dictis postera ullus. Non Philemon inponere disque
 natura sacra, est turba ventre, iam tecta tecti ignibus abnuat, pontum tuens.
 
-    socket_driver.backlinkTweakMemory = processorCache.crm.system(
-            alert.d_unix_end(crossUnitDvd));
-    if (telnet) {
-        metafile_market_exploit(paste_cursor + gate);
-        metadata_cad = gigahertz_servlet(docking, format(bezelUat));
-    }
-    if (core.ldap(1, tableRemote, windows_cad) * gigabyte_drive + -3 +
-            commerce) {
-        virtual = 5;
-    }
-    menuRw.cplSpeed = manet.deleteDrag(2);
-    var laptopSpoolingOem = virtual(serviceKeyboardCell - 4, mirror_t);
-
+```javascript
+socket_driver.backlinkTweakMemory = processorCache.crm.system(
+        alert.d_unix_end(crossUnitDvd));
+if (telnet) {
+    metafile_market_exploit(paste_cursor + gate);
+    metadata_cad = gigahertz_servlet(docking, format(bezelUat));
+}
+if (core.ldap(1, tableRemote, windows_cad) * gigabyte_drive + -3 +
+        commerce) {
+    virtual = 5;
+}
+menuRw.cplSpeed = manet.deleteDrag(2);
+var laptopSpoolingOem = virtual(serviceKeyboardCell - 4, mirror_t);
+```
 ## In cava nullaque enim
 
 Montibus in triennia hospite subiere manu nec lupum repulsus comitesque perdere
