@@ -1,7 +1,7 @@
 <template>
   <header
     id="site-header"
-    class="w-auto py-6 sticky top-0 backdrop-filter backdrop-blur-md z-10"
+    class="w-auto py-6 sticky top-0 bg-white dark:bg-slate-900 z-10"
   >
     <div
       class="
@@ -147,12 +147,12 @@ export default {
         var navbar = document.getElementById('site-header')
         var nav_classes = navbar.classList
         if (document.documentElement.scrollTop >= 60) {
-          if (nav_classes.contains('dark:bg-black/30') === false) {
-            nav_classes.toggle('dark:bg-black/30')
+          if (nav_classes.contains('dark:bg-black/40') === false) {
+            nav_classes.toggle('dark:bg-black/40')
           }
         } else {
-          if (nav_classes.contains('dark:bg-black/30') === true) {
-            nav_classes.toggle('dark:bg-black/30')
+          if (nav_classes.contains('dark:bg-black/40') === true) {
+            nav_classes.toggle('dark:bg-black/40')
           }
         }
       })
