@@ -20,7 +20,8 @@ Tentunya dengan Arahan serta mentor untuk membantu anda berada di “jalan yang 
 
 ![person-programmer](https://unsplash.com/photos/YK0HPwWDJ1I)
 
-Jangan menjadi orang seperti ini :
+
+### Jangan menjadi orang seperti ini
 
 ![learn-1](/blog/img/learn-1-.png)
 
@@ -43,7 +44,8 @@ in the long run
 
 tentunya disini kita butuh meluangkan waktu untuk menemukan langkah tersebut. Namun ini sangan membantu dalam jangka panjang.
 
-Pilih apa yang anda ingin pelajari.
+
+### Pilih apa yang anda ingin pelajari
 
 * iOS
 * Web
