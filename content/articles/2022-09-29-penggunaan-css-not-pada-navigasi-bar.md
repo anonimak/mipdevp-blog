@@ -21,7 +21,6 @@ tags:
 
 Pada contoh diatas bisa dilihat untuk mengatur warna background untuk semua element yang bukan element `<p>`.
 
-
 ### Contoh penggunaan pada navbar
 
 Oke disini kita akan mengimplementasikan `:not()` pada navbar.  Kita akan buat pembatas antara item navigasi dengan menggunakan `:not()`. Pertama kita akan buat htmlnya terlebih dahulu:
@@ -83,15 +82,17 @@ nav a:hover {
 ```
 
 hasilnya akan seperti ini:
-![navbar-not-css](https://mipdevp.com/blog/navbar-not-css.jpg)
+
+
+![gambar-navbar-not](/blog/img/navbar-not-css.jpg)
 
 disini kita bisa lihat penggunaan `:not` untuk pemberian pembatas selain item navbar terakhir `:not(:last-child)`
+
 ```css
 nav li:not(:last-child) {
   border-right: 1px solid #666;
 }
 ```
-
 
 untuk contoh code bisa dilihati via [codepen](https://codepen.io/anonimak/pen/KKRQrdJ).
 
