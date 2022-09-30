@@ -4,7 +4,7 @@ author: sanonimak@gmail.com
 date: 2022-09-30T15:21:40.706Z
 description: Tips panduan untuk memulai programming, serta membantu langkah awal
   dalam memilih alur atau arah yang tepat.
-isactive: false
+isactive: true
 tags:
   - guide
   - beginer
