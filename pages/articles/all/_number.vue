@@ -29,8 +29,9 @@
     </div>
     <Pagination
       v-if="!search"
+      :prevPage="pageNo > 1"
       :nextPage="nextPage"
-      :pageNo="1"
+      :pageNo="pageNo"
       urlPrefix="/articles/all"
     />
   </main>
@@ -40,11 +41,10 @@
 import CardArticleLarge from '~/components/CardArticleLarge.vue'
 export default {
   components: { CardArticleLarge },
-
   async asyncData({ $content, store, route }) {
     console.log(route)
-    const pageNo = 1
-    const numArticles = store.state.settings.blogs.front_limit
+    const pageNo = parseInt(route.params.number)
+    const numArticles = 2
 
     const articles = await $content('articles')
       .only(['title', 'slug', 'date', 'description', 'tags'])
@@ -70,20 +70,13 @@ export default {
   watch: {
     async search(search) {
       if (!search) {
-        const numArticles = this.$store.state.settings.blogs.front_limit
-        this.articles = await this.$content('articles')
-          .only(['title', 'slug', 'date', 'description', 'tags'])
-          .where({ isactive: { $ne: false } })
-          .limit(numArticles)
-          .skip(numArticles * (this.pageNo - 1))
-          .sortBy('date', 'desc')
-          .fetch()
-        return
+        this.$router.push('/articles')
       }
       this.articles = await this.$content('articles')
         .only(['title', 'slug', 'date', 'description', 'tags'])
         .sortBy(['title', 'slug', 'date', 'description', 'tags'])
         .where({ isactive: { $ne: false } })
+        .limit(10)
         .search(search)
         .fetch()
     },
