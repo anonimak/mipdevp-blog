@@ -18,7 +18,7 @@ Disini gw coba bantu temen-temen buat share untuk menentukan arah dimana harus m
 Karna basically “semua orang bisa belajar pemrograman” jika kita tau cara yang tepat untuk memulainya. 
 Tentunya dengan Arahan serta mentor untuk membantu anda berada di “jalan yang tepat” akan membawa anda ke “dream job and dream salary”.
 
-![person-programmer](/blog/img/luca-bravo-xjxwbfso2f0-unsplash.jpg)
+![person-programmer](https://source.unsplash.com/XJXWbfSo2f0/fit=max&w=200&q=60 "person-programmer")
 
 ### Jangan menjadi orang seperti ini
 
