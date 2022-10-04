@@ -1,68 +1,93 @@
-# mipdevp-blog
+<div id="top"></div>
+<div align="center">
+    <img src="https://user-images.githubusercontent.com/78784850/187615092-075c157d-5f88-4b9d-984e-e7260f885914.png" width="120px">
+    <h2>Smart Search</h2>
+    <p>Find the RIGHT phone for you!</p>
+    <p align="center">
+        <a href="https://mipdevp.com/blog/">Demo</a>
+        ·
+        <a href="https://github.com/anonimak/mipdevp-blog/issues">Report Bug</a>
+        ·
+        <a href="https://github.com/anonimak/mipdevp-blog/issues">Request Feature</a>
+    </p>
+    <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/anonimak/mipdevp-blog">
+    <img alt="GitHub Repo forks" src="https://img.shields.io/github/forks/anonimak/mipdevp-blog">
+    <img alt="issues" src="https://img.shields.io/github/issues/anonimak/mipdevp-blog"> </br>
+</div>
 
-## Build Setup
+## 🧑🏾‍💻Getting Started
+To get a local copy up and running follow these simple steps
 
-```bash
-# install dependencies
-$ npm install
+## 👇🏽Prerequisites
+- ![Git](https://git-scm.com/downloads)
+- ![Vue2](https://v2.vuejs.org/)
+- ![NuxtJS](https://nuxtjs.org/docs)
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+## 🛠️Installation
 
-# build for production and launch server
-$ npm run build
-$ npm run start
+1. [Fork](https://github.com/anonimak/mipdevp-blog/fork) the project. Click on the <a href="https://github.com/anonimak/mipdevp-blog/fork"><img src="https://i.imgur.com/G4z1kEe.png" height="15" width="15"></a> icon in the top right to get started
+2. Clone the repo
+    ```bash
+    git clone https://github.com/<your-username>/mipdevp-blog
+    ```
+3. Navigate to project directory
+    ```bash
+    cd mipdevp-blog
+    ```
+4. Install Project 
+    ```bash
+    # install dependencies
+    $ npm install
 
-# generate static project
-$ npm run generate
-```
+    # serve with hot reload at localhost:3000
+    $ npm run dev
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+    # build for production and launch server
+    $ npm run build
+    $ npm run start
 
-## Special Directories
+    # generate static project
+    $ npm run generate
+    ```
+## 🥂After Making Changes
+1. Create a new branch 
+    ```bash
+    git checkout -b <your-branch-name>
+    ```
+2. After doing all your work 
+    ```bash
+    git add <files>
+    ``` 
+    > NOTE: don't commit the package.json
+3. Commit your work 
+    ```bash
+    git cz
+    ```
+    > Note: use conventional commit method - ![read about it here](https://www.conventionalcommits.org/en/v1.0.0/)
+4. Push your work to the remote URL 
+    ```bash
+    git push origin <your-branch>
+    ```
 
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
+5. Now go to your forked repository on GitHub and contribute your branch to the main branch of the project.
 
-### `assets`
+## 👨‍👩‍👦Community
+Don't forget to join the discord community - ![Join Us](https://discord.gg/KUWjx4fygJ)
 
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
+## 💻 Contributing
+- Contributions make the open source community such an amazing place to learn, inspire, and create. 
+- Any contributions you make are greatly appreciated.
+- Check out our [Contribution guidelines](https://github.com/Dun-sin/smartsearch/blob/main/CONTRIBUTING.md#contribution-guidelines) for more information.
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
+## 🛡️ License
 
-### `components`
+mipdevp-blog is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
+## 💪🏽 Thanks to all Contributors
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
+Thanks a lot for spending your time helping mipdevp blog grow. Thanks a lot! Keep rocking🍻
 
-### `layouts`
+[![Contributors](https://contrib.rocks/image?repo=anonimak/mipdevp-blog)](https://github.com/anonimak/mipdevp-blog/graphs/contributors)
 
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
-
-### `pages`
-
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
-
-### `plugins`
-
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
-
-### `static`
-
-This directory contains your static files. Each file inside this directory is mapped to `/`.
-
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
-
-### `store`
-
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+## 🙏🏽Support
+This project needs a star️ from you. Don't forget to leave a star✨
