@@ -82,7 +82,7 @@ Don't forget to join the discord community - ![Join Us](https://discord.gg/KUWjx
 
 ## 🛡️ License
 
-mipdevp-blog is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+mipdevp-blog is licensed under the MIT License - see the [LICENSE](https://github.com/anonimak/mipdevp-blog/blob/master/LICENSE.md) file for details.
 
 ## 💪🏽 Thanks to all Contributors
 
