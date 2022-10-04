@@ -77,7 +77,7 @@ Don't forget to join the discord community - ![Join Us](https://discord.gg/KUWjx
 ## 💻 Contributing
 - Contributions make the open source community such an amazing place to learn, inspire, and create. 
 - Any contributions you make are greatly appreciated.
-- Check out our [Contribution guidelines](https://github.com/Dun-sin/smartsearch/blob/main/CONTRIBUTING.md#contribution-guidelines) for more information.
+- Check out our [Contribution guidelines](https://github.com/anonimak/mipdevp-blog/blob/master/CONTRIBUTION.md#contribution-guidelines) for more information.
 
 ## 🛡️ License
 
