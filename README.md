@@ -13,6 +13,7 @@
     </p>
     <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/anonimak/mipdevp-blog">
     <img alt="GitHub Repo forks" src="https://img.shields.io/github/forks/anonimak/mipdevp-blog">
+    <img alt="GitHub License" src="https://img.shields.io/github/license/anonimak/mipdevp-blog">
     <img alt="issues" src="https://img.shields.io/github/issues/anonimak/mipdevp-blog"> </br>
 </div>
 
