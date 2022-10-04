@@ -1,6 +1,7 @@
 <div id="top"></div>
+
 <div align="center">
-    <img src="https://user-images.githubusercontent.com/78784850/187615092-075c157d-5f88-4b9d-984e-e7260f885914.png" width="120px">
+    <img src="https://user-images.githubusercontent.com/48998369/193765166-be7dfe75-3d36-4745-9bd9-9559f7fcb2a2.png" width="120px">
     <h2>Smart Search</h2>
     <p>Find the RIGHT phone for you!</p>
     <p align="center">
