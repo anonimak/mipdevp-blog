@@ -2,8 +2,8 @@
 
 <div align="center">
     <img src="https://user-images.githubusercontent.com/48998369/193765166-be7dfe75-3d36-4745-9bd9-9559f7fcb2a2.png" width="120px">
-    <h2>Smart Search</h2>
-    <p>Find the RIGHT phone for you!</p>
+    <h2>Mipdevp-Blog</h2>
+    <p>Mipdevp static blog nuxt & tailwind</p>
     <p align="center">
         <a href="https://mipdevp.com/blog/">Demo</a>
         ·
@@ -73,7 +73,7 @@ To get a local copy up and running follow these simple steps
 5. Now go to your forked repository on GitHub and contribute your branch to the main branch of the project.
 
 ## 👨‍👩‍👦Community
-Don't forget to join the discord community - ![Join Us](https://discord.gg/KUWjx4fygJ)
+Don't forget to join the discord community - ![Join Us](https://discord.gg/KUWjx4fygJsdasda)
 
 ## 💻 Contributing
 - Contributions make the open source community such an amazing place to learn, inspire, and create. 
