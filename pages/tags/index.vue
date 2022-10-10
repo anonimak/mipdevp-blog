@@ -44,12 +44,11 @@
 </template>
 <script>
 export default {
-  async asyncData({ $content, store }) {
+  async asyncData({ $content }) {
     const articles = await $content('articles')
       .only(['tags'])
       .where({ isactive: { $ne: false } })
       .sortBy('date', 'desc')
-      .limit(store.state.settings.landings.front_limit)
       .fetch()
 
     let tags = []
