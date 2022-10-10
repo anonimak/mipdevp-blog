@@ -2,9 +2,9 @@
 title: Apa itu Hacktoberfest 2022?
 author: sanonimak@gmail.com
 date: 2022-10-10T03:22:17.034Z
-description: Sebuah event untuk developer berkontribusi pada pengembangan
-  opensource selama 1 bulan penuh yang diselengarakan setiap bulan oktober.
-  Gimana cara partisipasinya?, bisa dapet kaos gratiss!!
+description: Event untuk developer berkontribusi pada pengembangan opensource
+  selama 1 bulan penuh yang diselengarakan setiap bulan oktober. Gimana cara
+  partisipasinya?, bisa dapet kaos gratiss!!
 isactive: true
 tags:
   - general
