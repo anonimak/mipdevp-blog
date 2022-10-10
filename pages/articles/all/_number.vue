@@ -42,7 +42,6 @@ import CardArticleLarge from '~/components/CardArticleLarge.vue'
 export default {
   components: { CardArticleLarge },
   async asyncData({ $content, store, route }) {
-    console.log(route)
     const pageNo = parseInt(route.params.number)
     const numArticles = 2
 

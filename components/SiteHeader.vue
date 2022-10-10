@@ -141,7 +141,6 @@ export default {
   },
   methods: {
     changeMode() {
-      console.log(this.$colorMode.value)
       this.$colorMode.preference =
         this.$colorMode.preference === 'light' ? 'dark' : 'light'
     },

@@ -42,7 +42,6 @@ export default {
   components: { CardArticleLarge },
 
   async asyncData({ $content, store, route }) {
-    console.log(route)
     const pageNo = 1
     const numArticles = store.state.settings.blogs.front_limit
 

@@ -78,8 +78,6 @@ export default {
       .limit(store.state.settings.landings.front_limit)
       .fetch()
 
-    console.log(articles)
-
     return { articles }
   },
   head() {
