@@ -50,6 +50,7 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/robots',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/content
@@ -130,6 +131,11 @@ export default {
       id: process.env.GOOGLE_ANALYTICS_ID,
     },
     baseURL: process.env.BASE_URL || 'http://localhost:3000',
+  },
+
+  robots: {
+    UserAgent: '*',
+    Disallow: '',
   },
 
   pageTransition: 'page',
