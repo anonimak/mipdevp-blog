@@ -2,7 +2,7 @@
 title: QWIK, FRAMEWORK JAVASCRIPT TERCEPAT
 author: sanonimak@gmail.com
 date: 2022-10-12T04:10:08.896Z
-description: Mengenal QWIK 'HTML-first framework'. Aplikasi instant hanya
+description: Mengenal QWIK 'HTML-first framework'. Web aplikasi instant hanya
   seukuran ~ 1kb JS. framework javascript tercepat!!!
 isactive: true
 tags:
