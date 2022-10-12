@@ -84,9 +84,9 @@ mipdevp-blog is licensed under the MIT License - see the [LICENSE](https://githu
 
 ## Thanks to all Contributors
 
-Thanks a lot for spending your time helping mipdevp blog grow. Thanks a lot! Keep rocking🍻
+Thanks a lot for spending your time helping mipdevp blog grow.
 
 [![Contributors](https://contrib.rocks/image?repo=anonimak/mipdevp-blog)](https://github.com/anonimak/mipdevp-blog/graphs/contributors)
 
 ## Support
-This project needs a star️ from you. Don't forget to leave a star✨
+Don't forget to leave a star
