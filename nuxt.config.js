@@ -24,6 +24,13 @@ export default {
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/blog/favicon.png' }],
+    script: [
+      {
+        src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5313997000460681',
+        async: true,
+        crossorigin: 'anonymous',
+      },
+    ],
   },
 
   router: {
@@ -61,7 +68,6 @@ export default {
     '@nuxtjs/tailwindcss',
     '@nuxtjs/google-analytics',
     'vue-social-sharing/nuxt',
-    '@nuxtjs/google-adsense',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -149,10 +155,6 @@ export default {
       const routes = await getRoutes()
       return [...routes]
     },
-  },
-
-  'google-adsense': {
-    id: 'ca-pub-5313997000460681',
   },
 
   pageTransition: 'page',
