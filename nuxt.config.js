@@ -1,4 +1,5 @@
 import { getHighlighter, IHighlighterPaths } from 'shiki'
+import getRoutes from './utils/getRoutes'
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target
@@ -55,6 +56,7 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    '@nuxtjs/sitemap',
     '@nuxtjs/dayjs',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/google-analytics',
@@ -136,6 +138,16 @@ export default {
   robots: {
     UserAgent: '*',
     Disallow: '',
+    Sitemap: () =>
+      `${process.env.BASE_URL || 'http://localhost:3000'}/sitemap.xml`,
+  },
+
+  sitemap: {
+    hostname: 'https://mipdevp.com',
+    routes: async () => {
+      const routes = await getRoutes()
+      return [...routes]
+    },
   },
 
   pageTransition: 'page',
