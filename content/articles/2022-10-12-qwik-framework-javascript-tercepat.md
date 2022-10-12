@@ -17,6 +17,8 @@ Halo para tutorseekers [MIPDEVP](https://mipdevp.com) kembali lagi nih. Kali ini
 ### Apa itu QWIK?
 
 **Qwik** atau *quick* (cepattt) merupakan framework javascript yang mengusung konsep baru `HTML-first framework` yang dapat menyajikan suatu aplikasi web dengan cepat dan performa yang konsisten, menurut laman github [QWIK](https://github.com/BuilderIO/qwik) dengan konsep `HTML-first framework` pun diklam sangat cepat karena memungkinkan laman yang sepenuhnya interaktif untuk memuat dengan hampir tidak ada JavaScript yang dipanggil, yang artinya framework ini hanya memuat file js yang diperlukan saja pada saat user berinteraksi dengan web app saja, seperti **Lazy Load** namun dibawa ke level yang lebih tinggi. Hal ini yang membuat [QWIK](https://github.com/BuilderIO/qwik) berbeda dari framework lain.
+
+
 Setelah melalui 2 tahun pengembangan akhirnya framework ini melalui tahap beta produksi dengan fitur yang cukup lengkap, API yang stabil, dokumentasi yang jelas dan tidak banyak blok issue.
 Diusianya yang terbilang sangat muda, apa saja solusi yang dapat dipecahkan oleh framework ini?
 
