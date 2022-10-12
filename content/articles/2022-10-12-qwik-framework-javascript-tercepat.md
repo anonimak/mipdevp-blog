@@ -31,8 +31,8 @@ Dengan berkembangnya *Framework JavaScript*, sebuah *Modern website* sekarang me
 
 #### Yang dihadirkan [QWIK](https://github.com/BuilderIO/qwik)
 
-* Instant load: Tak seperti *framwork* lain, hal baru yang diciptakan oleh tim Qwik untuk memberikan 0 hidrasi. Ini memungkinkan aplikasi Qwik memiliki interaktivitas pemuatan yang instan, terlepas dari ukuran aplikasi atau kompleksitasnya. Ini berarti aplikasi akan dimuat secara instan tanpa jeda di jaringan apa pun.
-* Performance: [QWIK](https://github.com/BuilderIO/qwik) dapat membuat HTML murni, dan memuat JS secara bertahap sesuai kebutuhan. Ini berarti, laman memiliki JavaScript yang sangat sedikit untuk dieksekusi saat memuat dan mengunduh kode hanya pada interaksi saja. Inilah mengapan menjadikannya `HTML-first framework`.
+* **Instant load**: Tak seperti *framwork* lain, hal baru yang diciptakan oleh tim Qwik untuk memberikan 0 hidrasi. Ini memungkinkan aplikasi Qwik memiliki interaktivitas pemuatan yang instan, terlepas dari ukuran aplikasi atau kompleksitasnya. Ini berarti aplikasi akan dimuat secara instan tanpa jeda di jaringan apa pun.
+* **Performance**: [QWIK](https://github.com/BuilderIO/qwik) dapat membuat HTML murni, dan memuat JS secara bertahap sesuai kebutuhan. Ini berarti, laman memiliki JavaScript yang sangat sedikit untuk dieksekusi saat memuat dan mengunduh kode hanya pada interaksi saja. Inilah mengapan menjadikannya `HTML-first framework`.
 
 > gimana, tertarik?
 
