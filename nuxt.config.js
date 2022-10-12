@@ -61,6 +61,7 @@ export default {
     '@nuxtjs/tailwindcss',
     '@nuxtjs/google-analytics',
     'vue-social-sharing/nuxt',
+    '@nuxtjs/google-adsense',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -148,6 +149,10 @@ export default {
       const routes = await getRoutes()
       return [...routes]
     },
+  },
+
+  'google-adsense': {
+    id: 'ca-pub-5313997000460681',
   },
 
   pageTransition: 'page',
