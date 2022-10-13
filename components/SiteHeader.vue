@@ -4,15 +4,7 @@
     class="w-auto py-6 sticky top-0 bg-white dark:bg-slate-900 z-10"
   >
     <div
-      class="
-        m-auto
-        flex
-        items-center
-        px-4
-        sm:px-6
-        xl:max-w-7xl xl:px-0
-        justify-between
-      "
+      class="m-auto flex items-center px-4 sm:px-6 xl:max-w-7xl xl:px-0 justify-between"
     >
       <nuxt-link to="/">
         <img :src="navbar.logo" alt="" class="mr-3 h-10" srcset="" />
@@ -24,13 +16,7 @@
             v-for="(item, index) in items"
             :key="index"
             :to="item.href"
-            class="
-              p-1
-              text-lg text-teal-800
-              dark:text-teal-500
-              sm:p-4
-              hover:text-teal-900
-            "
+            class="p-1 text-lg text-teal-800 dark:text-teal-500 sm:p-4 hover:text-teal-900"
             >{{ item.title }}</nuxt-link
           >
         </div>
