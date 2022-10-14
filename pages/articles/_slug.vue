@@ -56,6 +56,7 @@
       <Disqus class="pt-10" :pageConfig="disqusConfig" />
     </article>
     <div class="sm:flex-none sm:w-96 sm:pl-8 sm:mr-8 xl:text-sm block">
+      <scroll-top />
       <div
         class="
           flex
