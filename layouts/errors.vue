@@ -1,14 +1,28 @@
 <template>
-  <div class="container">
-    <h1 v-if="error.statusCode === 404">Page not found</h1>
-    <h1 v-else>An error occurred</h1>
-    <NuxtLink to="/">Home page</NuxtLink>
+  <div class="nuxt-error">
+    <component :is="errorPage" :error="error" />
   </div>
 </template>
 
+
 <script>
+import error404 from '~/components/error/404.vue';
 export default {
-  props: ['error'],
-  layout: 'blog', // you can set a custom layout for the error page
+  name: 'nuxt-error',
+  props: {
+    error: {
+      type: Object,
+      default: null
+    }
+  },
+  computed: {
+     errorPage() {
+      return error404
+    },
+  },
 }
 </script>
+
+
+
+
