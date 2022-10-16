@@ -81,7 +81,41 @@ export default {
     return { articles }
   },
   head() {
+    const title = 'Opini | Tutorial | Panduan'
+    const description =
+      'blog yang terangkum informasi tentang opini-opini isu programming yang populer maupun terkini dari pandangan MIPDEVP, memberikan tutorial dan panduang yang mudah-mudahan sampai kepada para pencari tutorial ^^'
+
     return {
+      title: title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: description,
+        },
+        // Open Graph
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: title,
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: description,
+        },
+        // Twitter Card
+        {
+          hid: 'twitter:title',
+          name: 'twitter:title',
+          content: title,
+        },
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: description,
+        },
+      ],
       script: [
         { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' },
       ],

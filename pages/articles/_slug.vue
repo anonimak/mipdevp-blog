@@ -154,7 +154,7 @@ export default {
 
   head() {
     return {
-      title: `${this.article.title} - mipdevp-blog`,
+      title: this.article.title,
       meta: [
         {
           hid: 'article:published_time',
@@ -176,12 +176,23 @@ export default {
           name: 'article:title',
           content: this.article.title,
         }, // Open Graph
-        { hid: 'og:title', property: 'og:title', content: this.article.title },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: this.article.title,
+        },
         {
           hid: 'og:description',
           property: 'og:description',
           content: this.article.description,
-        }, // Twitter Card
+        },
+        { hid: 'og:type', property: 'og:type', content: 'article' },
+        {
+          hid: 'og:url',
+          property: 'og:url',
+          content: `https://mipdevp.com/blog/${this.article.slug}`,
+        },
+        // Twitter Card
         {
           hid: 'twitter:title',
           name: 'twitter:title',
@@ -191,11 +202,6 @@ export default {
           hid: 'twitter:description',
           name: 'twitter:description',
           content: this.article.description,
-        },
-        {
-          hid: 'twitter:card',
-          name: 'twitter:card',
-          content: 'summary_large_image',
         },
       ],
     }

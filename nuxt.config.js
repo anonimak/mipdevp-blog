@@ -4,10 +4,10 @@ import getRoutes from './utils/getRoutes'
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
-
+  ssr: true,
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'mipdevp blog - Opini, Tutorial, Panduan',
+    titleTemplate: 'MIPDEVP blog - %s',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -16,10 +16,36 @@ export default {
         content: 'VOLQl5-7me5iMWVWN2eOYt71o-RxfaAlPlKrgYYHhcA',
       },
       {
-        hid: 'description',
-        name: 'description',
-        content:
-          'blog yang terangkum informasi tentang opini-opini isu programming yang populer maupun terkini dari pandangan MIPDEVP, memberikan tutorial dan panduang yang mudah-mudahan sampai kepada para pencari tutorial ^^',
+        hid: 'og:site_name',
+        property: 'og:site_name',
+        content: 'mipdevp-blog',
+      },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { hid: 'twitter:site', name: 'twitter:site', content: '@mipdevp' },
+      {
+        hid: 'twitter:card',
+        name: 'twitter:card',
+        content: 'summary_large_image',
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: 'https://mipdevp.com/blog/favicon.png',
+      },
+      {
+        hid: 'og:image:secure_url',
+        property: 'og:image:secure_url',
+        content: 'https://mipdevp.com/blog/favicon.png',
+      },
+      {
+        hid: 'og:image:alt',
+        property: 'og:image:alt',
+        content: 'NuxtJS',
+      },
+      {
+        hid: 'twitter:image',
+        name: 'twitter:image',
+        content: 'https://mipdevp.com/blog/favicon.png',
       },
       { name: 'format-detection', content: 'telephone=no' },
     ],
@@ -31,6 +57,9 @@ export default {
         crossorigin: 'anonymous',
       },
     ],
+    htmlAttrs: {
+      lang: 'id',
+    },
   },
 
   router: {
