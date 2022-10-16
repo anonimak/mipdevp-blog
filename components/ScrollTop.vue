@@ -1,18 +1,30 @@
 <template>
   <div
     ref="scrollTopButton"
-    class="invisible fixed w-full flex justify-start bottom-0 pb-3 pl-4 lg:pl-5 transition"
+    class="
+      z-10
+      invisible
+      fixed
+      flex
+      w-full
+      justify-end
+      lg:justify-start lg:w-auto
+      bottom-0
+      pb-3
+      pr-8
+      transition
+    "
   >
     <div>
       <button
         @click="scrollToTop"
         role="button"
         aria-label="scroll to top of the page"
-        class="border-teal-800 dark:text-teal-500 border-2 h-8 w-8 rounded-full"
+        class="border-teal-700 dark:text-teal-500 border-2 h-12 w-12 rounded-md"
       >
         <font-awesome-icon
           icon="fa-solid fa-up-long"
-          class="text-teal-800 dark:text-teal-500 text-xl font-bold"
+          class="text-teal-700 dark:text-teal-500 text-xl font-bold"
         />
       </button>
     </div>

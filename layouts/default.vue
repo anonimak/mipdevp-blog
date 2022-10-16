@@ -19,7 +19,6 @@
       <Nuxt class="flex-grow" />
     </div>
     <site-footer />
-    <scroll-top />
   </div>
 </template>
 <script>

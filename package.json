@@ -1,6 +1,6 @@
 {
   "name": "mipdevp-blog",
-  "version": "1.0.0",
+  "version": "1.1.10",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -9,7 +9,8 @@
     "generate": "nuxt generate",
     "lint:prettier": "prettier --check .",
     "lint": "npm run lint:prettier",
-    "lintfix": "prettier --write --list-different ."
+    "lintfix": "prettier --write --list-different .",
+    "release": "standard-version"
   },
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^6.2.0",
@@ -42,6 +43,7 @@
     "eslint-config-prettier": "^8.3.0",
     "postcss": "^8.4.16",
     "prettier": "^2.5.1",
+    "standard-version": "^9.5.0",
     "tailwindcss-dark-mode": "^1.1.7"
   }
 }
