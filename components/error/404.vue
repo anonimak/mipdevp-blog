@@ -1,7 +1,7 @@
 <style>
 .__nuxt-error-page {
   padding: 1rem;
-  background: #0f172a;
+  background: content-box;
   color: #47494E;
   text-align: center;
   display: flex;
