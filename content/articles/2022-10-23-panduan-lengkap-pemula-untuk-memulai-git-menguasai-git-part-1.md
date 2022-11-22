@@ -17,7 +17,7 @@ Hai sobat tutorseekers kali ini [MIPDEVP](https://mipdevp.com) akan membahas tut
 > ### Menguasai Git 7 seri
 >
 > * **Panduan Lengkap Pemula untuk Memulai Git**
-> * [Tentang 'stash' di git](#)
+> * [Tentang 'stash' di git](https://mipdevp.com/blog/articles/2022-11-22-tentang-stash-di-git-menguasai-git-part-2)
 > * [Bagaimana cara membatalkan git pull](#)
 > * [Membuat .gitignore](#)
 > * [Git log untuk melihat perubahan terbaru dalam jangka waktu tertentu](#)
@@ -162,7 +162,7 @@ Sekian dari MIPDEVP, Arigatou!!
 > ### Menguasai Git 7 seri
 >
 > * **Panduan Lengkap Pemula untuk Memulai Git**
-> * [Tentang 'stash' di git](#)
+> * [Tentang 'stash' di git](https://mipdevp.com/blog/articles/2022-11-22-tentang-stash-di-git-menguasai-git-part-2)
 > * [Bagaimana cara membatalkan git pull](#)
 > * [Membuat .gitignore](#)
 > * [Git log untuk melihat perubahan terbaru dalam jangka waktu tertentu](#)
