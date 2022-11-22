@@ -25,7 +25,7 @@ Hai sobat tutorseekers kali ini [MIPDEVP](https://mipdevp.com) akan membahas tut
 
 ## Tentang 'stash' di git
 
-Terkadang ketika kita mengerjakan suatu tugas (pengerjaan fitur, membetulkan bug atau hal lain) dan masih dalam pengerjaan sehingga terdapat status perubahan pada git `git change` namun versi dari lokal tidak sesuai dengan yang ada di server, atau ada tim kita yang melakukan push ke server dan kita harus mensinkronkan versi sehingga menjadi sama. Permasalahan muncul ketika kita melakukan `git pull` tetapi terdapat perubahan *work tree* pada lokal (yang belum selesai dikerjakan) yang belum di-commit. Kita tahu bahwa `git pull` hanya bisa dilakukan ketika tidak ada perubahan di git. Bagaimana cara mengatasi ini? yang kita perlukan adalah
+Terkadang ketika kita mengerjakan suatu tugas (pengerjaan fitur, membetulkan bug atau hal lain) dan masih dalam pengerjaan sehingga terdapat status perubahan pada git `git status` namun versi dari lokal tidak sesuai dengan yang ada di server, atau ada tim kita yang melakukan push ke server dan kita harus mensinkronkan versi sehingga menjadi sama. Permasalahan muncul ketika kita melakukan `git pull` tetapi terdapat perubahan *work tree* pada lokal (yang belum selesai dikerjakan) yang belum di-commit. Kita tahu bahwa `git pull` hanya bisa dilakukan ketika tidak ada perubahan di git. Bagaimana cara mengatasi ini? yang kita perlukan adalah
 
 ```sh
 git stash
