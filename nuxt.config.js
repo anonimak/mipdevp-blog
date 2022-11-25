@@ -184,6 +184,13 @@ export default {
       const routes = await getRoutes()
       return [...routes]
     },
+    exclude: ['/articles'],
+    filter({ routes }) {
+      return routes.map((route) => {
+        route.url = `${route.url}/`
+        return route
+      })
+    },
   },
 
   pageTransition: 'page',
