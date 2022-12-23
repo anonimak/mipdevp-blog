@@ -1,7 +1,7 @@
 ---
 title: Apa Yang Bisa dilakukan Object console Selain console.log pada Javascript
 author: sanonimak@gmail.com
-date: 2022-12-08T10:55:12.458Z
+date: 2022-12-23T03:43:29.839Z
 description: console.log mungkin sangat familiar bagi para developer javascript
   untuk membantu menampilkan debug pada konsol web. Namun sebenarnya method
   log() yang sering kita gunakan hanyalah salah satu dari banyak fitur yang ada
