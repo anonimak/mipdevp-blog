@@ -8,13 +8,13 @@ description: console.log mungkin sangat familiar bagi para developer javascript
   pada objek console. Apakah saja fitur2 lain tersebut? dan mungkin saja dengan
   mengetahui hal ini kita bisa improve kualitas dan lebih mempermudah pembacaan
   output debug kita.
-isactive: false
+isactive: true
 tags:
-  - general
+  - javascript
 ---
-![]()
-
 ### Apa Yang Bisa dilakukan Object console Selain console.log pada Javascript
+
+![console-image](https://images.unsplash.com/photo-1607799279861-4dd421887fb3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTYzMDI4NDAxMg&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080 "console-image")
 
 `console.log` mungkin sangat familiar bagi para developer javascript untuk membantu menampilkan debug pada konsol web. Namun sebenarnya method `log()` yang sering kita gunakan hanyalah salah satu dari banyak fitur yang ada pada objek `console`. Apakah saja fitur2 lain tersebut? dan mungkin saja dengan mengetahui hal ini kita bisa improve kualitas dan lebih mempermudah pembacaan output debug kita. Oke  sobat tutorseekers langsung saja kita kupas lebih dalam di pembahasan kali ini.
 
