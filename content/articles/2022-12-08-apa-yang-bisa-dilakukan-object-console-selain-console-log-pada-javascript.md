@@ -8,7 +8,7 @@ description: console.log mungkin sangat familiar bagi para developer javascript
   pada objek console. Apakah saja fitur2 lain tersebut? dan mungkin saja dengan
   mengetahui hal ini kita bisa improve kualitas dan lebih mempermudah pembacaan
   output debug kita.
-isactive: true
+isactive: false
 tags:
   - javascript
 ---
