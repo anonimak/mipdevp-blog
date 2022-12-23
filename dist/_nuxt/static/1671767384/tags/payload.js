@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/tags", (function(a,b,c){return {data:[{tags:{css:b,"design-web":a,"css-tools":a,git:b,github:4,vcs:b,qwik:a,framework:a,javascript:a,general:c,hacktoberfest:a,tips:c,guide:a,beginer:a,"beginer guide":a}}],fetch:{},mutations:[]}}(1,3,2)));
