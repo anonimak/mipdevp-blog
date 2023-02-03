@@ -16,7 +16,7 @@
       "
     >
       <header class="mb-12 pb-8 lg:mb-16 border-gray-200 border-b-2">
-        <h1 class="mb-0 dark:text-teal-700">{{ article.title }}</h1>
+        <h2 class="mb-0 dark:text-teal-700 uppercase">{{ article.title }}</h2>
         <p class="dark:text-gray-200">{{ article.description }}</p>
 
         <!-- container for article details -->
