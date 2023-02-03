@@ -43,7 +43,7 @@ export default {
   components: { CardArticleLarge },
   async asyncData({ $content, store, route }) {
     const pageNo = parseInt(route.params.number)
-    const numArticles = store.state.settings.landings.front_limit
+    const numArticles = store.state.settings.blogs.front_limit
 
     const articles = await $content('articles')
       .only(['title', 'slug', 'date', 'description', 'tags'])
