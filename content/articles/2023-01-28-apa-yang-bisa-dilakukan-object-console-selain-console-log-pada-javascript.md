@@ -1,7 +1,7 @@
 ---
 title: Apa Yang Bisa dilakukan Object console Selain console.log pada Javascript
 author: sanonimak@gmail.com
-date: 2022-12-23T03:43:29.839Z
+date: 2023-01-28T03:43:29.839Z
 description: console.log mungkin sangat familiar bagi para developer javascript
   untuk membantu menampilkan debug pada konsol web. Namun sebenarnya method
   log() yang sering kita gunakan hanyalah salah satu dari banyak fitur yang ada
@@ -24,11 +24,11 @@ Objek `console` menyediakan akses ke konsol debugging browser (misalnya konsol W
 
    `console.group` dan `console.groupEnd`. Method ini memungkinkan kita membungkus dan mengelompokan beberapa konsol. Ini dapat berguna untuk mengatur dan menyusun hasil debug kita, sehingga dapat dengan mudah melihat apa yang terjadi di berbagai tingkat dan pengelompokan kode kita.
 
-```
-        console.group('Profile Details');
-        console.log('Name: Mipdevp');
-        console.log('Age: 32');
-        console.groupEnd();
+```javascript
+console.group('Profile Details');
+console.log('Name: Mipdevp');
+console.log('Age: 32');
+console.groupEnd();
 ```
 
 Ini akan membuat grup bersarang yang dapat dilipat di konsol dengan nama "Profile Details". Pesan log yang ada di dalamnya akan dikelompokkan bersama.
@@ -37,7 +37,7 @@ Ini akan membuat grup bersarang yang dapat dilipat di konsol dengan nama "Profil
 
    `console.time` dan `console.timeEnd`. Method ini memungkinkan kita untuk mengukur jumlah waktu yang diperlukan untuk mengeksekusi satu blok kode. Ini dapat berguna untuk mengetahui kinerja, berapa lama proses eksekus suatu blok kode dalam satu waktu sehingga dari hasilnya kita dapat mengoptimalkan blok kode yang dibuat.
 
-```
+```javascript
  console.time('Fetching data');
  fetch('https://jsonplaceholder.typicode.com/todos/1')
  .then(response => response.json())
@@ -52,8 +52,8 @@ Ini akan membuat grup bersarang yang dapat dilipat di konsol dengan nama "Profil
 
    `console.table` sangat berguna saat kita perlu menampilkan array dalam format tabel. Yang harus dilakukan hanyalah meneruskan array dan menampilkan hasilnya dalam format tabel di konsol browser. 
 
-```
- const user = [
+```javascript
+const user = [
    { nama: "Yanto" },
    { nama: "Joni" },
    { nama: "Jono" },
@@ -69,7 +69,7 @@ console.table(user);
 
    `console.assert` sangat mirip dengan `console.error` tetapi dengan satu perbedaan membutuhkan nilai boolean sebagai argumen pertama dan pesan sebagai argumen kedua yang akan ditampilkan jika boolean bernilai true jika tidak ditampilkan. Ini cukup berguna karena menghindari kebutuhan untuk membungkus console.error dalam kondisional.
 
-```
+```javascript
 const isLogin = true
 console.assert(!isLogin, "Anda belum login")
 ```
@@ -78,7 +78,7 @@ console.assert(!isLogin, "Anda belum login")
 
    `console.count` menerima label dan menampilkan berapa kali `count()` dipanggil dengan label itu jika tidak ada nilai yang diberikan label default ke default. Dan jika ingin mengatur ulang kembali menjadi 0 kita bisa menggunakan `console.countReset`.
 
-```
+```javascript
 console.count();
 console.count();
 console.count();
@@ -111,7 +111,7 @@ label: 3
 
    `console.dir` adalah cara untuk melihat semua properti dari objek JavaScript yang ditentukan di konsol yang dengannya kita dapat dengan mudah mendapatkan properti dari objek tersebut.
 
-```
+```javascript
 dir(object)
 ```
 
@@ -119,15 +119,15 @@ dir(object)
 
    `console.trace` menerima pesan dan menampilkan pesan tersebut dengan tumpukan panggilan saat ini atau urutan fungsi yang dipanggil berdasarkan tempat `trace()` dipanggil.
 
-```
+```javascript
 const func1 = () => {
-console.trace("Current Trace:");
+   console.trace("Current Trace:");
 };
 const func2 = () => {
-func1();
+   func1();
 };
 const func3 = () => {
-func2();
+   func2();
 };
 ```
 
@@ -135,7 +135,7 @@ func2();
 
    `console.clear` membersihkan konsol jika konsol mengizinkannya. Konsol grafis, seperti yang berjalan di browser, akan mengizinkannya; konsol yang ditampilkan di terminal, seperti yang berjalan di Node, tidak akan mendukungnya, dan tidak akan berpengaruh (dan tidak ada kesalahan).
 
-```
+```javascript
 clear()
 ```
 
@@ -143,6 +143,6 @@ clear()
 
    `console.info` menampilkan pesan informasional ke konsol Web. Di Firefox, ikon "i" kecil ditampilkan di sebelah item ini di log konsol Web.
 
-```
+```javascript
 info(msg)
 ```
