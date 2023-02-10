@@ -1,5 +1,5 @@
 ---
-title: Membuat .gitignore (Menguasai Git part 3)
+title: Membuat .gitignore (Menguasai Git part 4)
 author: sanonimak@gmail.com
 date: 2023-02-10T05:07:10.929Z
 description: "Menyederhanakan Proses Git dengan .gitignore: Cara Mudah untuk
