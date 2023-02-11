@@ -19,7 +19,7 @@ Hai sobat tutorseekers kali ini [MIPDEVP](https://mipdevp.com) akan membahas tut
 > * **Panduan Lengkap Pemula untuk Memulai Git**
 > * [Tentang 'stash' di git](https://mipdevp.com/blog/articles/2022-11-22-tentang-stash-di-git-menguasai-git-part-2/)
 > * [Bagaimana cara membatalkan git pull](https://mipdevp.com/blog/articles/2022-11-27-bagaimana-cara-membatalkan-git-pull-menguasai-git-part-3/)
-> * [Membuat .gitignore](#)
+> * [Membuat .gitignore](https://mipdevp.com/blog/articles/2023-02-10-membuat-gitignore-menguasai-git-part-3)
 > * [Git log untuk melihat perubahan terbaru dalam jangka waktu tertentu](#)
 > * [Mengubah dan memperbarui git commit](#)
 > * [Overwrite local change dengan 'git pull'](#)
