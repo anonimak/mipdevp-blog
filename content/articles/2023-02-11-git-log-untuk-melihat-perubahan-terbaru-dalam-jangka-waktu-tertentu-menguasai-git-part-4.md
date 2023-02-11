@@ -1,6 +1,6 @@
 ---
 title: Git log untuk melihat perubahan terbaru dalam jangka waktu tertentu
-  (Menguasai Git part 4)
+  (Menguasai Git part 5)
 author: sanonimak@gmail.com
 date: 2023-02-11T05:31:53.271Z
 description: Git log! Git log adalah fitur yang sangat berguna dalam Git yang
