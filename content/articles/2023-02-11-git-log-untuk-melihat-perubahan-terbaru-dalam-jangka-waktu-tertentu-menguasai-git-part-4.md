@@ -25,30 +25,34 @@ Hai sobat tutorseekers kali ini [MIPDEVP](https://mipdevp.com) akan membahas tut
 > * [Mengubah dan memperbarui git commit](#)
 > * [Overwrite local change dengan 'git pull'](#)
 
-
 Yo, kita semua tahu bahwa Git adalah version control system yang wajib dimiliki oleh setiap developer. Ini membantu kita untuk memantau dan mencatat setiap perubahan yang dilakukan pada proyek kita. Tapi, bagaimana cara melihat perubahan terbaru dalam jangka waktu tertentu?
 
 Nah, ini dia solusinya: Git log! Git log adalah fitur yang sangat berguna dalam Git yang membantu kita melihat perubahan yang terjadi dalam jangka waktu tertentu. Kita bisa melihat perubahan seperti:
 
-    Siapa yang mengcommit perubahan
-    Kapan perubahan tersebut dibuat
-    Apa perubahan yang dilakukan
+```shell
+Siapa yang mengcommit perubahan
+Kapan perubahan tersebut dibuat
+Apa perubahan yang dilakukan
+```
 
 Penggunaan Git log sangat mudah, cukup dengan mengetikkan perintah "git log" di terminal atau command prompt. Namun, untuk melihat perubahan dalam jangka waktu tertentu, kita perlu menambahkan beberapa opsi.
 
 Misalnya, jika kita ingin melihat perubahan dalam satu minggu terakhir, kita bisa menambahkan opsi "--since" seperti ini:
 
-```bash
+```shell
 git log --since='1 week ago'
 ```
+
 Atau jika kita ingin melihat perubahan dalam satu bulan terakhir, kita bisa menambahkan opsi "--since" seperti ini:
 
-```bash
+```shell
 git log --since='1 month ago'
 ```
+
 Sama seperti "--since", kita juga bisa menambahkan opsi "--until" untuk menentukan batas akhir dari jangka waktu yang ingin kita lihat perubahannya. Misalnya:
 
 ```perl
 git log --since='1 month ago' --until='2 weeks ago'
 ```
+
 Itu dia, Git log yang gampang dan berguna untuk memantau perubahan dalam jangka waktu tertentu. Jangan lupa untuk selalu memantau perubahan pada proyek kita, agar kita tahu apa saja yang terjadi dan siapa saja yang terlibat. Happy coding, guys!
