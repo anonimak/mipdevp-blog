@@ -22,7 +22,7 @@ Hai sobat tutorseekers kali ini [MIPDEVP](https://mipdevp.com) akan membahas tut
 > * [Bagaimana cara membatalkan git pull](https://mipdevp.com/blog/articles/2022-11-27-bagaimana-cara-membatalkan-git-pull-menguasai-git-part-3/)
 > * [Membuat .gitignore](https://mipdevp.com/blog/articles/2023-02-10-membuat-gitignore-menguasai-git-part-3)
 > * **Git log untuk melihat perubahan terbaru dalam jangka waktu tertentu**
-> * [Mengubah dan memperbarui git commit](#)
+> * [Mengubah dan memperbarui git commit](https://mipdevp.com/blog/articles/2023-02-21-git-log-untuk-melihat-perubahan-terbaru-dalam-jangka-waktu-tertentu-menguasai-git-part-6)
 > * [Overwrite local change dengan 'git pull'](#)
 
 Yo, kita semua tahu bahwa Git adalah version control system yang wajib dimiliki oleh setiap developer. Ini membantu kita untuk memantau dan mencatat setiap perubahan yang dilakukan pada proyek kita. Tapi, bagaimana cara melihat perubahan terbaru dalam jangka waktu tertentu?
