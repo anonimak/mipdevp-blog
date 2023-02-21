@@ -20,8 +20,8 @@ Hai sobat tutorseekers kali ini [MIPDEVP](https://mipdevp.com) akan membahas tut
 > * [Tentang 'stash' di git](https://mipdevp.com/blog/articles/2022-11-22-tentang-stash-di-git-menguasai-git-part-2/)
 > * [Bagaimana cara membatalkan git pull](https://mipdevp.com/blog/articles/2022-11-27-bagaimana-cara-membatalkan-git-pull-menguasai-git-part-3/)
 > * [Membuat .gitignore](https://mipdevp.com/blog/articles/2023-02-10-membuat-gitignore-menguasai-git-part-3)
-> * [Git log untuk melihat perubahan terbaru dalam jangka waktu tertentu](#)
-> * [Mengubah dan memperbarui git commit](#)
+> * [Git log untuk melihat perubahan terbaru dalam jangka waktu tertentu](https://mipdevp.com/blog/articles/2023-02-11-git-log-untuk-melihat-perubahan-terbaru-dalam-jangka-waktu-tertentu-menguasai-git-part-4)
+> * [Mengubah dan memperbarui git commit](https://mipdevp.com/blog/articles/2023-02-21-mengubah-dan-memperbarui-git-commit-menguasai-git-part-6)
 > * [Overwrite local change dengan 'git pull'](#)
 
 ## Singkat mengenai Git
