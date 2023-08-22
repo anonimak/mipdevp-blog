@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/tags", (function(a,b,c,d){return {data:[{tags:{cpns:a,psikotes:a,karir:a,general:b,"psikotes online":a,karier:a,git:c,github:7,vcs:c,javascript:d,css:b,"design-web":a,"css-tools":a,qwik:a,framework:a,hacktoberfest:a,tips:d,guide:a,beginer:a,"beginer guide":a}}],fetch:{},mutations:[]}}(1,3,6,2)));

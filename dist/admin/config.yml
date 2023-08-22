@@ -1,0 +1,142 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+
+media_folder: static/img
+public_folder: /blog/img
+
+collections:
+  - name: 'blog'
+    label: 'Blog'
+    folder: 'content/articles'
+    format: 'frontmatter'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    editor:
+      preview: true
+    preview_path: 'blog/{{slug}}'
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - {
+          label: 'Author',
+          name: 'author',
+          widget: 'relation',
+          collection: 'authors',
+          value_field: 'email',
+          display_fields: ['name'],
+          search_fields: ['name', 'email'],
+        }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Active', name: 'isactive', widget: 'boolean' }
+      - label: 'Tags'
+        name: 'tags'
+        widget: 'list'
+        max: 3
+        min: 1
+        default: ['general']
+  - name: authors
+    label: Authors
+    folder: content/authors
+    format: json
+    create: true
+    slug: '{{name}}'
+    fields:
+      - { label: Name, name: name, widget: string }
+      - { label: Title, name: title, widget: string }
+      - { label: Email, name: email, widget: string }
+      - { label: Shortbio, name: shortbio, widget: text }
+      - { label: Image, name: authorimage, widget: image }
+
+  - name: 'settings'
+    label: 'Settings'
+    delete: false # Prevent users from deleting documents in this collection
+    editor:
+      preview: false
+    files:
+      - name: 'general'
+        label: 'Site Settings'
+        file: '_data/settings.json'
+        description: 'General Site Settings'
+        fields:
+          - { label: 'Global title', name: 'site_title', widget: 'string' }
+          - { label: 'Favicon', name: 'favicon', widget: 'image' }
+
+          - label: 'Navbar Settings'
+            name: 'navbar'
+            widget: 'object'
+            fields:
+              - { label: 'Navbar Logo', name: 'logo', widget: 'image' }
+
+          - label: 'Landing Page Settings'
+            name: 'landings'
+            widget: 'object'
+            fields:
+              - label: 'Hero Section'
+                name: 'hero'
+                widget: 'object'
+                fields:
+                  - { label: 'Title', name: 'title', widget: 'string' }
+                  - {
+                      label: 'Description',
+                      name: 'description',
+                      widget: 'string',
+                    }
+                  - {
+                      label: 'Image Hero',
+                      name: 'image',
+                      widget: 'image',
+                      required: false,
+                    }
+              - {
+                  label: 'Number of blogs on Landing Page',
+                  name: 'front_limit',
+                  widget: 'number',
+                  min: 1,
+                  max: 10,
+                }
+
+          - label: 'Blog Settings'
+            name: 'blogs'
+            widget: 'object'
+            fields:
+              - {
+                  label: 'Number of blogs on frontpage',
+                  name: 'front_limit',
+                  widget: 'number',
+                  min: 1,
+                  max: 10,
+                }
+              - { label: 'Default Author', name: 'author', widget: 'string' }
+              - {
+                  label: 'Default Thumbnail',
+                  name: 'thumb',
+                  widget: 'image',
+                  class: 'thumb',
+                  required: false,
+                }
+          - label: 'About Settings'
+            name: 'about'
+            widget: 'object'
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string' }
+              - { label: 'Sub Title', name: 'sub_title', widget: 'string' }
+              - label: 'Social Media'
+                name: 'social_media'
+                widget: 'object'
+                fields:
+                  - { label: 'Email', name: 'email', widget: 'string' }
+                  - { label: 'Youtube', name: 'youtube', widget: 'string' }
+                  - { label: 'Twitter', name: 'twitter', widget: 'string' }
+                  - { label: 'Instagram', name: 'instagram', widget: 'string' }
+              - { label: 'Body About', name: 'body', widget: 'markdown' }
+          - label: 'Footer Settings'
+            name: 'footer'
+            widget: 'object'
+            fields:
+              - {
+                  label: 'Footer Description',
+                  name: 'description',
+                  widget: 'string',
+                }
